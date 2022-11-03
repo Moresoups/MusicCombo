@@ -108,6 +108,8 @@ fetch('https://spotify23.p.rapidapi.com/search/?q=Planet%20Waves&type=albums&off
 .then(data => console.log(data))
 .catch(err => console.error(err));
 
+
+//silvia
 else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false))
 console.log("TBD");
 
@@ -117,6 +119,9 @@ console.log("TBD");
 else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true))
 console.log("TBD");
 
+
+
+//connor
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false))
 console.log("TBD");
 
