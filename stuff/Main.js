@@ -121,21 +121,21 @@ console.log("TBD");
 
 //connor
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false))
-fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=multi&offset=0&limit=10&numberOfTopResults=5')
+fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
 console.log("Cigarettes After Sex");
 
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
-fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5')
+fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
 console.log("Empire of the Sun");
 
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
-fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5')
+fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
