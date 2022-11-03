@@ -1,3 +1,10 @@
+//rollingstones youtbechannel
+//channelId :UCB_Z6rBg3WW3NL4-QimhC2A 
+//APIkey:AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then (data => data.json())
+.then (list =>console.log (list));
+
 //rolling stones search
 
 
@@ -125,18 +132,27 @@ fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then (data => data.json())
+.then (list =>console.log (list));
 
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
 fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then (data => data.json())
+.then (list =>console.log (list));
 
 else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
 fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then (data => data.json())
+.then (list =>console.log (list));
 
 else
 console.log("invalid selection")
@@ -186,11 +202,14 @@ console.log("invalid selection")
 // The Midnight (Dark/Light)
 
 'https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5'
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
 
 // Cigarettes After Sex (Fire/Dark)
 
 'https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=multi&offset=0&limit=10&numberOfTopResults=5'
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
 
 // Empire of the Sun (Fire/Light)
 
 'https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5'
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
