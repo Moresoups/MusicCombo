@@ -1,9 +1,9 @@
 //rollingstones youtbechannel
 //channelId :UCB_Z6rBg3WW3NL4-QimhC2A 
 //APIkey:AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0
-// fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-// .then (data => data.json())
-// .then (list =>console.log (list));
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then (data => data.json())
+.then (list =>console.log (list));
 
 //rolling stones search
 
@@ -21,10 +21,10 @@ const options2 = {
 }
 
 // fetch info goes here
-// fetch('https://spotify23.p.rapidapi.com/search/?q=the%20rolling%20stones&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-// 	.then(res => res.json())
-// 	.then(data => console.log(data))
-// 	.catch(err => console.error(err));
+fetch('https://spotify23.p.rapidapi.com/search/?q=the%20rolling%20stones&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
+	.then(res => res.json())
+	.then(data => console.log(data))
+	.catch(err => console.error(err));
 
 // Combine elements:
 
@@ -140,56 +140,22 @@ function combine() {
 			.then(res => res.json())
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
-	// fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-	// .then (data => data.json())
-	// .then (list =>console.log (list));
 
 	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
 		fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 			.then(res => res.json())
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
-	// fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-	// .then (data => data.json())
-	// .then (list =>console.log (list));
 
 	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
 		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
 			.then(res => res.json())
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
-	// fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-	// .then (data => data.json())
-	// .then (list =>console.log (list));
 
 	else
 		console.log("invalid selection")
 }
-// function combineTwo() {
-// 	if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false))
-// 		fetch('http://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=the%20rolling%20stones&format=json', options2)
-// 			.then(res => res.json())
-// 			.then(data => console.log(data))
-// 			.catch(err => console.error(err));
-// 	else if ((Wind == true) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false))
-// 		fetch('http://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=deepsky&format=json', options2)
-// 			.then(res => res.json())
-// 			.then(data => console.log(data))
-// 			.catch(err => console.error(err));
-
-	// fetch('http://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=red%20hot%20chili%20peppers&format=json', options2)
-	// 	.then(res => res.json())
-	// 	.then(data => console.log(data))
-	// 	.catch(err => console.error(err));
-
-	// fetch('http://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=tobacco&format=json', options2)
-	// 	.then(res => res.json())
-	// 	.then(data => console.log(data))
-	// 	.catch(err => console.error(err));
-
-// 	else
-// 		console.log("invalid selection")
-// }
 
 //songs with fetch info
 
