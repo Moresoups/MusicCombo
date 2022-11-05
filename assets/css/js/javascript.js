@@ -73,7 +73,7 @@ function light() {
     Light = !Light
     console.log("confirmed");
 }
-
+//s
 function combine() {
 if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false))
 
