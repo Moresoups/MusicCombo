@@ -158,17 +158,20 @@ fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cconten
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
-//silvia
+//Band Hillsong United
+//music - Another in the Water
 if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false))
-fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCiA-mbL3zPJWciFlpRxM7Bg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC4q12NoPNySbVqwpw4iO5Vg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
 
 
-//darwater band
+//Agent Fresco
+//music - Dark Water
+
 if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false))
-fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCgo-QWZakyG81WVpcSFm6hQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-PCZ7ffFGuaLc1xndULydw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
 .then(res => res.json())
 .then(data => console.log(data))
 .catch(err => console.error(err));
@@ -183,15 +186,94 @@ fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cconten
 .catch(err => console.error(err));
 
 //connor
-else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false))
-console.log("TBD");
-
-else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
-console.log("TBD");
-
-else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
-console.log("TBD");
+ if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false))
+	fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+ fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));	
+ if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
+	fetch('https://spotify23.p.rapidapi.com/search/?q=Empire%20of%20the%20Sun&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+    fetch ('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+    .then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
+	fetch('https://spotify23.p.rapidapi.com/search/?q=The%20Midnight&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+	
+.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
 else
-console.log("invalid selection")
+		console.log("invalid selection")
 }
+
+//songs with fetch info
+
+
+//The Heavy
+
+'https://spotify23.p.rapidapi.com/search/?q=The%20Heavy&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+//red hot chili peppers
+
+'https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+//the white stripes
+
+'https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+//deepsky
+
+'https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+//tobacco
+
+'https://spotify23.p.rapidapi.com/search/?q=TOBACCO&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+// MF DOOM
+
+'https://spotify23.p.rapidapi.com/search/?q=mf%20doom&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+// Planet Waves
+
+'https://spotify23.p.rapidapi.com/search/?q=Planet%20Waves&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+
+// The comet is coming 
+
+'https://spotify23.p.rapidapi.com/search/?q=The%20Comet%20is%20Coming&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+// The Midnight (Dark/Light)
+
+'https://spotify23.p.rapidapi.com/search/?q=The%20Midnight&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
+
+// Cigarettes After Sex (Fire/Dark)
+
+'https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
+
+// Empire of the Sun (Fire/Light)
+
+'https://spotify23.p.rapidapi.com/search/?q=Empire%20of%20the%20Sun&type=albums&offset=0&limit=2&numberOfTopResults=2'
+
+'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
