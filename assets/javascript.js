@@ -64,94 +64,69 @@ function light() {
 	Light = !Light
 	console.log("confirmed");
 }
+function generateUrl() {
+	let bandName;
+	if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false)){
+		bandName = "the%20rolling%20stones"
+	}
+	if ((Wind == true) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+		bandName = "Deepsky"
+	}
+	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+		bandName = "red%20hot%20chili%20peppers"
+	}
+	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+		bandName = "TOBACCO"
+	}
+	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+		bandName = "the%20white%20stripes"
+	}
+	if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+		bandName = "The%20Heavy"
+	}
+	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+		bandName = "The%20Comet%20is%20Coming"
+	}
+	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+		bandName = "mf%20doom"
+	}
+	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+		bandName = "Planet%20Waves"
+	}
+	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false)) {
+		bandName = "cigarettes%20after%20sex"
+	}
+	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true)) {
+		bandName = "Empire%20of%20the%20Sun"
+	}
+	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true)) {
+		bandName = "The%20Midnight"
+	}
+
+
+	return `https://spotify23.p.rapidapi.com/search/?q=${bandName}&type=albums&offset=0&limit=2&numberOfTopResults=2`
+}
 
 function combine() {
-	if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20rolling%20stones&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
+	const url = generateUrl();
+		fetch(url, options1)
 			.then(res => res.json())
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
 
-
-	if ((Wind == true) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=TOBACCO&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-	if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false))
-		console.log("The Heavy");
-
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=The%20Heavy&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=mf%20doom&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=Planet%20Waves&type=albums&offset=0&limit=2&numberOfTopResults=2', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
 
 
 	//silvia
 	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false))
 		console.log("TBD");
 
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false))
+	else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false))
 		console.log("TBD");
 
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true))
+	else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true))
 		console.log("TBD");
 
 
-
-	//connor
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true))
-		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5', options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
 
 	else
 		console.log("invalid selection")
