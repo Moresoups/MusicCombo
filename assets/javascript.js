@@ -102,8 +102,9 @@ function generateUrl() {
 	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true)) {
 		bandName = "The%20Midnight"
 	}
-
-
+	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false))
+	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false))
+	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true))
 	return `https://spotify23.p.rapidapi.com/search/?q=${bandName}&type=albums&offset=0&limit=2&numberOfTopResults=2`
 }
 
@@ -113,19 +114,6 @@ function combine() {
 			.then(res => res.json())
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
-
-
-
-	//silvia
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false))
-		console.log("TBD");
-
-	else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false))
-		console.log("TBD");
-
-	else if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true))
-		console.log("TBD");
-
 
 
 	else
