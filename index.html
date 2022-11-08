@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
@@ -14,35 +15,49 @@
 <table>
 <topPoint>
 
-<button class="E" style='margin-right:50px' row="1" onclick="earth();">
-Earth
-</button>
+<div class="columns is-mobile is-multiline is-centered">
+  <div class="column is-narrow">
+      <button class="E bd-notification is-primary html" style='margin-right:50px' row="1" onclick="earth();"> 
+        <i class="fa-solid fa-earth-americas"></i>
+      Earth
+      </button>
+     
+    </div>
+    </div>
+
 </textarea>
 </topPoint>
 
 <upperPoints>
 <button class="WI" style='margin-right:50px' row="1" onclick="wind();">
+  <i class="fa-solid fa-wind"></i>
   Wind
  </button>
 
 
  <button class="F" style='margin-right:50px' onclick="fire();">
+  <i class="fa-solid fa-fire"></i>
   Fire
  </button>
 </upperPoints>
 
 <lowerPoint>
  <button class="WA" style='margin-right:50px' onclick="water();">
+  <i class="fa-solid fa-fire"></i>
   Water
  </button>
 
  <button class="D" style='margin-right:50px' onclick="dark();">
+  
+  <i class="fa-solid fa-circle"></i>
  Dark
 </button>
 </lowerPoint>
 
 <bottomPoint>
 <button class="L" style='margin-right:50px' onclick="light();">
+  <i class="fa-solid fa-sun"></i>
+
  Light
  </button>
 </bottomPoint>
