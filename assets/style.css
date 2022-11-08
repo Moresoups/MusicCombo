@@ -80,7 +80,7 @@ body {
 
 .E {
     background-color: rgb(145, 97, 52);
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -99,7 +99,7 @@ body {
 
   .WA {
     background-color: rgb(0, 60, 255);
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -118,7 +118,7 @@ body {
 
   .WI {
     background-color: rgb(69, 176, 226);
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -137,7 +137,7 @@ body {
 
   .F {
     background-color: rgb(255, 51, 0);
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -156,7 +156,7 @@ body {
 
   .D {
     background-color: black;
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -175,7 +175,7 @@ body {
 
   .L {
     background-color: rgb(238, 238, 130);
-    border: none;
+    border: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -212,10 +212,6 @@ body {
     background-color: purple
     
     }
-
-    .infobox{
-color:aliceblue
+    .activated {
+      background-color: #F00;
     }
-
-
-   
