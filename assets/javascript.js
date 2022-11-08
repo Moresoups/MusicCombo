@@ -70,129 +70,127 @@ function light() {
 }
 function generateUrl() {
 	let bandName;
-	if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false)){
+	if ((Wind) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false)) {
 		bandName = "the%20rolling%20stones"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
 		bandName = "Deepsky"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
 		bandName = "red%20hot%20chili%20peppers"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
 		bandName = "TOBACCO"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
 		bandName = "the%20white%20stripes"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
 		bandName = "The%20Heavy"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
 		bandName = "The%20Comet%20is%20Coming"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
 		bandName = "mf%20doom"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
 		bandName = "Planet%20Waves"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark) && (Light == false)) {
 		bandName = "cigarettes%20after%20sex"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light)) {
 		bandName = "Empire%20of%20the%20Sun"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light)) {
 		bandName = "The%20Midnight"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire) && (Dark == false) && (Light == false)) {
 		bandName = "Hillsong%20United"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark) && (Light == false)) {
 		bandName = "Agent%20Fresco"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light)) {
 		bandName = "creedence%20clearwater%20revival"
 	}
+	else {
+			console.log("Invalid selection. Please select two elements before clicking Combine!");
+			location.reload();
+		}
+	
 	return `https://spotify23.p.rapidapi.com/search/?q=${bandName}&type=albums&offset=0&limit=2&numberOfTopResults=2`
 
-	// if (response === 404) {
-	// 	console.log("Invalid Selection")
-	// }
 }
 
 function generateUrl2() {
 	let youtubeName;
-	if ((Wind == true) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false)){
+	if ((Wind) && (Earth) && (!Water) && (Fire == false) && (Dark == false) && (Light == false)) {
 		youtubeName = 'UCB_Z6rBg3WW3NL4-QimhC2A'
 	}
-	if ((Wind == true) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
 		youtubeName = 'UCo-3ThNQmPmQSQL_L6Lx1_w'
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
 		youtubeName = "UCEuOwB9vSL1oPKGNdONB4ig"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
 		youtubeName = "UC1IJxltUbLLbjTPrkHQxnrg"
 	}
-	if ((Wind == true) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
 		youtubeName = "UC0sQemK7pgX5fYy0k1MFsHg"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
 		youtubeName = "UCYDD7WruLEgEBfjxeor48aw"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
 		youtubeName = "UCAxylzB43zb-5vESDQv9QxQ"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
 		youtubeName = "UC6Y8dX3XdGsp2akU-SKfreA"
 	}
-	if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
 		youtubeName = "UCfZ5OqdpjhtD0OvR8P_nsGg"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark) && (Light == false)) {
 		youtubeName = "UCqNxhPZoLJ81i5QaK4nqn8A"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light)) {
 		youtubeName = "UCyacMWc-JhzX6iq2PCF-4jw"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light)) {
 		youtubeName = "UC-sM_PLqzgktdUcW2LEKKkQ"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire) && (Dark == false) && (Light == false)) {
 		youtubeName = "UC4q12NoPNySbVqwpw4iO5Vg"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == true) && (Light == false)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark) && (Light == false)) {
 		youtubeName = "UC-PCZ7ffFGuaLc1xndULydw"
 	}
-	if ((Wind == false) && (Earth == false) && (Water == true) && (Fire == false) && (Dark == false) && (Light == true)) {
+	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light)) {
 		youtubeName = "UC69yJGpLNIMk6_ECLwxBZwA"
 	}
-	return 'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId='+youtubeName+'&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-	
-	// if (response === 404) {
-	// 	console.log("Invalid Selection")
-	// }
+	else {
+		console.log("Invalid selection. Please select two elements before clicking Combine!");
+		
+	}
+	return 'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=' + youtubeName + '&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
+
 
 }
 
 function combine() {
 	const url1 = generateUrl();
-		fetch(url1, options1)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
+	fetch(url1, options1)
+		.then(res => res.json())
+		.then(data => console.log(data))
+		.catch(err => console.error(err));
 	const url2 = generateUrl2();
-		fetch(url2)
-			.then(res => res.json())
-			.then(data => console.log(data))
-			.catch(err => console.error(err));
-
-
-
-	// else
-	// 	console.log("invalid selection")
+	fetch(url2)
+		.then(res => res.json())
+		.then(data => console.log(data))
+		.catch(err => console.error(err));
 }
 
 //songs with fetch info
