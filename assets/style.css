@@ -155,7 +155,7 @@ body {
   }
 
   .D {
-    background-color: black;
+    background-color: rgb(62, 50, 61);
     border: black;
     color: white;
     padding: 20px;
@@ -209,7 +209,7 @@ body {
 
   .L:active, .E:active, .WI:active, .F:active, .WA:active, .D:hover{
 
-    background-color: purple
+    background-color: rgb(73, 50, 73)
     
     }
     .activated {
