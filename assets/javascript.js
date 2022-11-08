@@ -134,8 +134,19 @@ function combine() {
 			.then(data => console.log(data))
 			.catch(err => console.error(err));
 	}
+//the comet is coming
+else if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
+	fetch('https://spotify23.p.rapidapi.com/search/?q=the%20comet%20is%20coming&type=artists&offset=0&limit=10&numberOfTopResults=2', options1)
+		.then(response => response.json())
+		.then(response => console.log(response))
+		.catch(err => console.error(err));
+		fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCAxylzB43zb-5vESDQv9QxQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+			.then(data => console.log(data))
+			.catch(err => console.error(err));
+}
+
 	//the heavy
-	else if ((Wind == false) && (Earth == true) && (Water == false) && (Fire == true) && (Dark == false) && (Light == false)) {
+	else if ((Wind == false) && (Earth == true) && (Water == true) && (Fire == false) && (Dark == false) && (Light == false)) {
 		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20heavy&type=artists&offset=0&limit=2&numberOfTopResults=2', options1)
 			.then(response => response.json())
 			.then(response => console.log(response))
@@ -211,7 +222,7 @@ function combine() {
 			.catch(err => console.error(err));
 	}
 
-	//connor
+	//cigarettes after sex
 	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == true) && (Light == false)) {
 		fetch('https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=artists&offset=0&limit=2&numberOfTopResults=2', options1)
 			.then(response => response.json())
@@ -222,7 +233,7 @@ function combine() {
 			.then(response => console.log(response))
 			.catch(err => console.error(err));
 	}
-
+// empire of the sun
 	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == true) && (Dark == false) && (Light == true)) {
 		fetch('https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=artists&offset=0&limit=2&numberOfTopResults=2', options1)
 			.then(response => response.json())
@@ -233,7 +244,7 @@ function combine() {
 			.then(response => console.log(response))
 			.catch(err => console.error(err));
 	}
-
+// the midnight
 	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == true) && (Light == true)) {
 		fetch('https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=2&numberOfTopResults=2', options1)
 			.then(response => response.json())
@@ -260,10 +271,6 @@ function combine() {
 
 	//clear all
 
-	function death() {
-		console.clear()
-		localStorage.clear();
-	}
 
 
 
