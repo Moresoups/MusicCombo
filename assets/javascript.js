@@ -33,6 +33,8 @@ const options3 = {
 	}
 };
 
+const playList = document.querySelector("ul");
+const combineBtn = document.getElementById("combine");
 
 // Combine elements:
 
@@ -191,13 +193,14 @@ function combine() {
 	fetch(url1, options1)
 		.then(res => res.json())
 		.then(data => console.log(data))
-		.catch(err => console.error(err));
+		.catch(err => console.error(err))
 	const url2 = generateUrl2();
 	fetch(url2)
 		.then(res => res.json())
 		.then(data => console.log(data))
-		.catch(err => console.error(err));
+		.catch(err => console.error(err))
 }
+
 
 function death() {
 	console.clear()
@@ -205,6 +208,7 @@ function death() {
 }
 
 //songs with fetch info
+
 
 
 // The Rolling Stones
