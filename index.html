@@ -5,56 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
   </head>
   <body>
     <h1 class="is-size-4">Music Maker</h1>
     <main>
+      <button class="E" style="margin-right: 50px" row="1" onclick="earth();">
+        Earth
+      </button>
 
-<table>
-<topPoint>
+      <button class="WI" style="margin-right: 50px" row="1" onclick="wind();">
+        Wind
+      </button>
 
-<button class="E" style='margin-right:50px' row="1" onclick="earth();">
-Earth
-</button>
-</textarea>
-</topPoint>
+      <button class="F" style="margin-right: 50px" onclick="fire();">
+        Fire
+      </button>
 
-<upperPoints>
-<button class="WI" style='margin-right:50px' row="1" onclick="wind();">
-  Wind
- </button>
+      <button class="WA" style="margin-right: 50px" onclick="water();">
+        Water
+      </button>
 
+      <button class="D" style="margin-right: 50px" onclick="dark();">
+        Dark
+      </button>
 
- <button class="F" style='margin-right:50px' onclick="fire();">
-  Fire
- </button>
-</upperPoints>
-
-<lowerPoint>
- <button class="WA" style='margin-right:50px' onclick="water();">
-  Water
- </button>
-
- <button class="D" style='margin-right:50px' onclick="dark();">
- Dark
-</button>
-</lowerPoint>
-
-<bottomPoint>
-<button class="L" style='margin-right:50px' onclick="light();">
- Light
- </button>
-</bottomPoint>
-</table>
-
-
+      <button class="L" style="margin-right: 50px" onclick="light();">
+        Light
+      </button>
     </main>
-    
-
-
 
     <button class="MERGE" onclick="combine();" role="button">Combine!</button>
+
+    <div id="spotify"></div>
+
+    <div id="youtube"></div>
 
     <script src="assets/javascript.js"></script>
   </body>

@@ -217,3 +217,8 @@ body {
     .activated {
       background-color: #F00;
     }
+
+    #spotify > *{
+      display: block;
+      color: white;
+    }
