@@ -139,6 +139,7 @@ body {
     background-color: rgb(255, 51, 0);
     border: black;
     color: white;
+  
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -161,7 +162,7 @@ body {
     padding: 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block;  
     font-size: 40px;
     margin: 4px 2px;
     font-weight: normal;
@@ -215,3 +216,5 @@ body {
     .activated {
       background-color: #F00;
     }
+    
+
