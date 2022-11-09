@@ -14,10 +14,10 @@
 <body>
   <main>
 
-    <table>
-      <topPoint>
+    <table class="is-grouped is-grouped-multiline">
+    
 
-        <div class="columns is-mobile is-multiline is-centered">
+        <div class="columns is-size-small is-multiline is-centered">
           <div class="column is-narrow">
             <button class="E bd-notification is-primary html" style='margin-right:50px' row="1" onclick="earth();">
               <i class="fa-solid fa-earth-americas"></i>
@@ -28,9 +28,9 @@
         </div>
 
         </textarea>
-      </topPoint>
+     
 
-      <upperPoints>
+      
         <button class="WI" style='margin-right:50px' row="1" onclick="wind();">
           <i class="fa-solid fa-wind"></i>
           Wind
@@ -41,9 +41,9 @@
           <i class="fa-solid fa-fire"></i>
           Fire
         </button>
-      </upperPoints>
+    
 
-      <lowerPoint>
+     
         <button class="WA" style='margin-right:50px' onclick="water();">
           <i class="fa-solid fa-tint"></i>
           Water
@@ -54,15 +54,15 @@
           <i class="fa-solid fa-circle"></i>
           Dark
         </button>
-      </lowerPoint>
+     
 
-      <bottomPoint>
+      
         <button class="L" style='margin-right:50px' onclick="light();">
           <i class="fa-solid fa-sun"></i>
 
           Light
         </button>
-      </bottomPoint>
+     
     </table>
     <button class="MERGE" id="combine" onclick="combine();" role="button">Combine!</button>
 
@@ -76,6 +76,8 @@
     </div> -->
     <div id="spotify"></div>
     <div id="youtube"></div>
+
+    <!-- Creating a box to hold combinations used -->
     <ul class='box radius-small'>
       <h3 class="has-background-grey-light">Combinations Used</h3>
       <div class='columns is-mobile is-centered'>
