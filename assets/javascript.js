@@ -31,8 +31,41 @@ const options = {
   },
 };
 
-// Combine elements:
+//hide button when clicked
 
+const refresh = document.getElementById("btn6");
+
+const btn1 = document.getElementById("btn1");
+btn1.addEventListener("click", () => {
+  btn1.style.display = "none";
+});
+
+const btn2 = document.getElementById("btn2");
+btn2.addEventListener("click", () => {
+  btn2.style.display = "none";
+});
+
+const btn3 = document.getElementById("btn3");
+btn3.addEventListener("click", () => {
+  btn3.style.display = "none";
+});
+
+const btn4 = document.getElementById("btn4");
+btn4.addEventListener("click", () => {
+  btn4.style.display = "none";
+});
+
+const btn5 = document.getElementById("btn5");
+btn5.addEventListener("click", () => {
+  btn5.style.display = "none";
+});
+
+const btn6 = document.getElementById("btn6");
+btn6.addEventListener("click", () => {
+  btn6.style.display = "none";
+});
+
+// Combine elements:
 let Water = false;
 let Earth = false;
 let Wind = false;
@@ -69,9 +102,18 @@ function light() {
   Light = !Light;
   console.log("confirmed");
 }
+
 //songs combined function
+
 //rolling stones
 function combine() {
+  btn6.style.display = "none";
+  btn5.style.display = "none";
+  btn4.style.display = "none";
+  btn3.style.display = "none";
+  btn2.style.display = "none";
+  btn1.style.display = "none";
+  refresh.style.display = "none";
   if (
     Wind == true &&
     Earth == true &&
