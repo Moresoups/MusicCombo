@@ -1,12 +1,11 @@
 body {
-    background: #1d1f20;
-    text-align: center;
-    padding: 60px;
-    font-family: sans-serif;
-  }
+  text-align: center;
+  padding: 60px;
+  font-family: sans-serif;
+  background-color: #111;
+}
 
-
-.MERGE{
+.MERGE {
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -20,7 +19,7 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   font-size: 70px;
-  top: 100px;
+  top: 50px;
 }
 
 .MERGE:before {
@@ -73,148 +72,175 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-
-
-
 .E {
-    background-color: rgb(145, 97, 52);
-    border: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation:bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
+  background-color: rgb(145, 97, 52);
+  border: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.WA {
+  background-color: rgb(0, 60, 255);
+  border: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.WI {
+  background-color: rgb(69, 176, 226);
+  border: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.F {
+  background-color: rgb(255, 51, 0);
+  border: black;
+  color: white;
+
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.D {
+  background-color: black;
+  border: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.L {
+  background-color: rgb(238, 238, 130);
+  border: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+}
+
+.L:hover,
+.E:hover,
+.WI:hover,
+.F:hover,
+.WA:hover,
+.D:hover {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  animation: slidebg 2s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
   }
+}
+.L:active,
+.E:active,
+.WI:active,
+.F:active,
+.WA:active,
+.D:hover {
+  background-color: purple;
+}
+.activated {
+  background-color: #f00;
+}
 
-  .WA {
-    background-color: rgb(0, 60, 255);
-    border: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation:bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
-  }
+.spotify {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  color: rgb(137, 4, 4);
+  font-size: large;
+  background: #111;
+}
 
-  .WI {
-    background-color: rgb(69, 176, 226);
-    border: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation:bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
-  }
+.hero {
+  background: #212121;
+}
 
-  .F {
-    background-color: rgb(255, 51, 0);
-    border: black;
-    color: white;
-  
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation:bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
-  }
-
-  .D {
-    background-color: black;
-    border: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;  
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation:bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
-  }
-
-  .L {
-    background-color: rgb(238, 238, 130);
-    border: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 40px;
-    margin: 4px 2px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 50%;
-    animation: bouncy 5s infinite linear;
-    position: relative;
-    top: 30px;
-  }
-
-  @keyframes bouncy {
-    0%{top:0em}
-    40%{top:0em}
-    43%{top:-0.9em}
-    46%{top:0em}
-    48%{top:-0.4em}
-    50%{top:0em}
-    100%{top:0em;}
-    }
-
-  .L:hover, .E:hover, .WI:hover, .F:hover, .WA:hover, .D:hover {
-    color: rgb(255, 255, 255);
-    box-shadow: 0 5px 15px rgba(245, 55, 143, 0.4);
-  }
-
-  .L:active, .E:active, .WI:active, .F:active, .WA:active, .D:hover{
-
-    background-color: purple
-    
-    }
-    .activated {
-      background-color: #F00;
-    }
-    
-
+html {
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  background: #212121;
+}

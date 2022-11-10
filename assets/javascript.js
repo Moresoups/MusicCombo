@@ -90,9 +90,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, url, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Wind and Earth</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -132,9 +133,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Wind and Water</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -173,9 +175,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Wind and Fire</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -213,9 +216,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Wind and Dark</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This is a warped combo, the music of an atelectatic lung in a great machine world whose design and purpose is so beyond our understanding it is supernatural. Fear and confusion are all that awaits you. But, that is still better than feeling nothing at all</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -234,7 +238,7 @@ function combine() {
       })
       .catch((err) => console.error(err));
   }
-  //the white stripes
+  //the white stripes need quote
   else if (
     Wind == true &&
     Earth == false &&
@@ -253,9 +257,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Wind and Light</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of freedom. Where you are flying through a clear bright sky where anything is possible. This is the music of dreams. Reality has no power in such a combination.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -293,9 +298,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Earth and Fire</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of creation, the titanic power and scale of the universe in which we are mere specks. What is the meaning of such life in the face of titanic forces? This is the music of Existentialism</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -335,9 +341,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Earth and Water</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This combo is the sound of silence, peace and solitude in a world that insists you engage with it. In our times, women have always been left out of heady topics such as revolution and nationalism. Queers and people of color are anti-nationalist simply by existing. The people of earth and water are just here and that act does not need to be revolutionary to be just.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -375,9 +382,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Earth and Dark</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of reality. Earth and Dark is the here and now, the struggle of all life and the beauty of the mundane. The music of community and the collective experience of society both good and bad</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -398,7 +406,7 @@ function combine() {
       .catch((err) => console.error(err));
   }
 
-  //planet waves
+  //planet waves need quote
   else if (
     Wind == false &&
     Earth == true &&
@@ -417,9 +425,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Earth and Light</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of revelations, the light cracks the stone and all things kept underground are brought to light. This is the music of those that seek truths and the agony they often bring upon themselves.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -459,9 +468,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Water and Fire</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>This is a combo of instant reaction, of gut feeling, of always moving and always decision making. It is a combo of always burning yourself out because water drowns fire and fire evaporates water. The music of Fire and Water is never still. It writhes under the skin and rings in the ears. chaos is its natural state.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -502,9 +512,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Water and Dark</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of peace. Dark has many negative connotations, but it can also be deep, safe and very gentle energy. The deep dark water returns us to the place we were before we were. The infinite amount of time where we did not exist.  It is the music of a great deep sea that welcomes all.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -542,9 +553,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Water and Light</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>The combo of life. Water and light is a divine convergence where all things become balanced and all truths are made clear. The music of negative energy being washed away</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -584,9 +596,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Fire and Dark</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>A fire that produces no heat and casts no shadow. This combination is the opposite of existence, an endless void. This is the music of nothing, the heat death of the universe where all energy is spent and nothing can ever exist again.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -625,9 +638,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Fire and Light</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>A powerful combo that is as bright and brilliant as the sun. It burns bright and fades instantly. This is the music of miracles.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -666,9 +680,10 @@ function combine() {
         const spotify = document.getElementById("spotify");
         const { profile, uri, visuals } = response.artists.items[0].data;
         spotify.innerHTML = `
-					<h4>${profile.name}</h4>
-					
+					<h2>${profile.name}</h2>
+					<h3>Dark and Light</h3>
 					<img src="${visuals.avatarImage.sources[1].url}" />
+          <h3>A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality.</h3>
 				`;
       })
       .catch((err) => console.error(err));
@@ -700,55 +715,3 @@ function combine() {
     console.log("error");
   }
 }
-
-//clear all
-
-//songs with fetch info
-
-("https://spotify23.p.rapidapi.com/search/?q=The%20Heavy&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-//red hot chili peppers
-
-("https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-//the white stripes
-
-("https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-//deepsky
-
-("https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-//tobacco
-
-("https://spotify23.p.rapidapi.com/search/?q=TOBACCO&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-// MF DOOM
-
-("https://spotify23.p.rapidapi.com/search/?q=mf%20doom&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-// Planet Waves
-
-("https://spotify23.p.rapidapi.com/search/?q=Planet%20Waves&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-// The comet is coming
-
-("https://spotify23.p.rapidapi.com/search/?q=The%20Comet%20is%20Coming&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-// The Midnight (Dark/Light)
-
-("https://spotify23.p.rapidapi.com/search/?q=The%20Midnight&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-("https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0");
-
-// Cigarettes After Sex (Fire/Dark)
-
-("https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-("https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0");
-
-// Empire of the Sun (Fire/Light)
-
-("https://spotify23.p.rapidapi.com/search/?q=Empire%20of%20the%20Sun&type=albums&offset=0&limit=2&numberOfTopResults=2");
-
-("https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0");
