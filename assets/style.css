@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    padding: 60px;
+    padding: 5px;
     font-family: sans-serif;
     background-color: #111;
   }
@@ -20,6 +20,7 @@ body {
     touch-action: manipulation;
     font-size: 70px;
     top: 50px;
+    width: 100%;
   }
   
   .MERGE:before {
@@ -136,7 +137,8 @@ body {
     background-color: rgb(255, 51, 0);
     border: black;
     color: white;
-  
+     width: 200px;
+     height: 100px;
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -148,7 +150,7 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 100%;
     position: relative;
-    top: 30px;
+    top: 1px;
     cursor: pointer;
   }
   
