@@ -118,7 +118,11 @@ function combine() {
 	btn3.style.display = "none";
 	btn2.style.display = "none";
 	btn1.style.display = "none";
-	refresh.style.display = "none";
+	Combine.style.display = "none";
+
+	document.getElementById('FindMore').style.display = "";
+	document.getElementById('Refresh').style.display = "";
+
 	if (
 		Wind == true &&
 		Earth == true &&
@@ -137,13 +141,13 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Wind & Earth - The Rolling Stones"
-		
+
 				// for (var i = 0; i < combinationHistory.length; i++) {
-					combinationHistory.push(combination)
-					localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
-					const listItem = document.createElement("li")
-					listItem.innerHTML = combinationHistory;
-					combinationList.appendChild(listItem);
+				combinationHistory.push(combination)
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combinationHistory;
+				combinationList.appendChild(listItem);
 				// }
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
@@ -855,6 +859,10 @@ function combine() {
 		console.log("no selection");
 	} else {
 		console.log("error");
+	}
+	//reset function
+	function reset() {
+		window.location.reload();
 	}
 
 }
