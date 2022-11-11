@@ -36,6 +36,7 @@ const options = {
 
 // const refresh = document.getElementById("combine");
 const allBtns = document.getElementsByClassName("btn");
+const combineBtn = document.getElementById("combine");
 
 
 for (let i=0; i < allBtns.length; i++) {
@@ -258,16 +259,11 @@ function light() {
 // }
 
 function combine() {
-	btn6.style.display = "none";
-	btn5.style.display = "none";
-	btn4.style.display = "none";
-	btn3.style.display = "none";
-	btn2.style.display = "none";
-	btn1.style.display = "none";
-	Combine.style.display = "none";
+	allBtns.style.display = "none";
 
-	document.getElementById('FindMore').style.display = "";
-	document.getElementById('Refresh').style.display = "";
+
+	document.getElementById('findMore').style.display = "";
+	document.getElementById('refresh').style.display = "";
 
 	refresh.style.display = "block";
 	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
@@ -312,11 +308,7 @@ function combine() {
 				console.log("response2", response2);
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
-				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"  width="640" height="360"
-        frameborder="0"
-        style="border: solid 4px #37474F"
-          ></iframe>`;
+				youtube.innerHTML = `<iframe src="${youtubeLink}"  width="640" height="360" frameborder="0" style="border: solid 4px #37474F"></iframe>`;
 			})
 			.catch((err) => console.error(err));
 	}
