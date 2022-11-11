@@ -14,10 +14,12 @@
   <section class="hero is-medium">
     <h1 class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
     <div class="hero-head">
+      <!-- Button container -->
       <div class="container">
         <div class="columns is-mobile">
           <div class="column is-half">
-            <button class="btn bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1" onclick="earth();">
+            <button class="btn bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1"
+              onclick="earth();">
               <i class="fa-solid fa-earth-americas"></i>
               Earth
             </button>
@@ -31,7 +33,7 @@
         <div id="youtube"></div>
         <div class="columns is-mobile">
           <div class="column is-one-quarter">
-            <button class="WI" style='margin-right:50px' id="btn3" onclick="wind();">
+            <button class="btn" style='margin-right:50px' id="btn3" onclick="wind();">
               <i class="fa-solid fa-wind"></i>
               Wind</button>
           </div>
@@ -67,27 +69,49 @@
     </div>
     </div>
     </div>
-    <ul id="combinationList"></ul>
     <div id="spotify" class="spotify"> </div>
-    
-    <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
-   <button class="MERGE"  onclick="Reset();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
-<container>
-    <div id="spotify" class="spotify is-4"> </div>
+
+    <button class="btn MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
+    <button class="MERGE" onclick="Reset();" style="display:none;" id="Refresh">Do Another Combination</button>
+    <container>
+      <div id="spotify" class="spotify is-4"> </div>
     </container>
-<section class="top-banner" style="display:none;" id="FindMore">
-<div class='container'>        
+    <section class="top-banner" style="display:none;" id="FindMore">
+      <div class='container'>
 
-  <input type=”text” id=”trackInput”>
-  <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
-  <section id="playAudioHere"></section>
-</section>
-</main>
+        <input type=”text” id=”trackInput”>
+        <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
+        <section id="playAudioHere"></section>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="column is- is-multiline">
+          <div class="column is-one-fifth">
+            <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
+              <header class="card-header has-background-grey-dark ">
+                <p class="card-header-title subtitle has-text-white is-centered">
+                  Combinations
+                </p>
+              </header>
+              <div class="card-content ">
+                <ul id="combinationList"></ul>
+              </div>
+            </div>
+          </div>
+    </section>
+    </main>
 
-
+    <footer class="footer pb-0">
+      <div class="content has-text-white">
+        <p>
+          <strong class="has-text-white">Contributors</strong> : Christopher Gardner - Connor Bazil - Silvia Olinger</a>
+        </p>
+      </div>
+    </footer>
+    
     <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
     <script src="assets/javascript.js"></script>
-    
+
 </body>
 
 </html>
