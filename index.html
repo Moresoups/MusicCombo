@@ -5,92 +5,111 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Maker</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>Elemental Music Maker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <main>
-
-    <table class="is-grouped is-grouped-multiline">
-    
-
-        <div class="columns is-size-small is-multiline is-centered">
-          <div class="column is-narrow">
-            <button class="E bd-notification is-primary html" style='margin-right:50px' row="1" onclick="earth();">
+  <section class="hero is-medium">
+    <h1 class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
+    <div class="hero-head">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-half">
+            <button class="btn bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1" onclick="earth();">
               <i class="fa-solid fa-earth-americas"></i>
               Earth
             </button>
-
+          </div>
+          <div class="column is-4-offset-7">
+            <button class="btn" style='margin-right:50px' id="btn2" onclick="fire();">
+              <i class="fa-solid fa-fire"></i>
+              Fire</button>
           </div>
         </div>
+        <div id="youtube"></div>
+        <div class="columns is-mobile">
+          <div class="column is-one-quarter">
+            <button class="btn" style='margin-right:50px' id="btn3" onclick="wind();">
+              <i class="fa-solid fa-wind"></i>
+              Wind</button>
+          </div>
+          <div class="column is-4 is-offset-6">
+            <button class="btn" style='margin-right:50px' id="btn4" onclick="water();">
+              <i class="fa-solid fa-tint"></i>
+              Water </button>
+          </div>
 
-        </textarea>
-     
+        </div>
 
-      
-        <button class="WI" style='margin-right:50px' row="1" onclick="wind();">
-          <i class="fa-solid fa-wind"></i>
-          Wind
-        </button>
+        <div class="columns is-mobile">
 
+          <div class="column is-4 is-offset-2">
+            <button class="btn" style='margin-right:50px' id="btn5" onclick="dark();">
+              <i class="fa-solid fa-circle"></i>
+              Dark
+            </button>
+          </div>
+        </div>
+        <div class="column">
+          <button class="btn" style='margin-right:50px' id="btn6" onclick="light();">
+            <i class="fa-solid fa-sun"></i>
 
-        <button class="F" style='margin-right:50px' onclick="fire();">
-          <i class="fa-solid fa-fire"></i>
-          Fire
-        </button>
-    
+            Light
+          </button>
 
-     
-        <button class="WA" style='margin-right:50px' onclick="water();">
-          <i class="fa-solid fa-tint"></i>
-          Water
-        </button>
-
-        <button class="D" style='margin-right:50px' onclick="dark();">
-
-          <i class="fa-solid fa-circle"></i>
-          Dark
-        </button>
-     
-
-      
-        <button class="L" style='margin-right:50px' onclick="light();">
-          <i class="fa-solid fa-sun"></i>
-
-          Light
-        </button>
-     
-    </table>
-    <button class="MERGE" id="combine" onclick="combine();" role="button">Combine!</button>
-
-    <button onclick="death()"> Clear all</button>
-  
-    <!-- <div class = "card">
-      <div class = "media-content">
-        <p class="title-is-4">Combinations Used</p>
-      </div>
-      <div class = "content"></div>
-    </div> -->
-    <div id="spotify"></div>
-    <div id="youtube"></div>
-
-    <!-- Creating a box to hold combinations used -->
-    <ul class='box radius-small'>
-      <h3 class="has-background-grey-light">Combinations Used</h3>
-      <div class='columns is-mobile is-centered'>
-        <div class='column is-5'>
-          <li class="list-item">
-          </li>
         </div>
       </div>
-    </ul>
-  </main>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div id="spotify" class="spotify"> </div>
+    
+    <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
+   <button class="MERGE"  onclick="Reset();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
+<container>
+    <div id="spotify" class="spotify is-4"> </div>
+    </container>
+<section class="top-banner" style="display:none;" id="FindMore">
+<div class='container'>        
+
+  <input type=”text” id=”trackInput”>
+  <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
+  <section id="playAudioHere"></section>
+</section>
+<section class="section">
+  <div class="container">
+  <div class="column is- is-multiline">
+    <div class="column is-one-fifth">
+      <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
+        <header class="card-header has-background-grey-dark ">
+          <p class= "card-header-title subtitle has-text-white is-centered">
+            Combinations
+          </p>
+        </header>
+        <div class="card-content ">
+          <ul id="combinationList"></ul>
+        </div>
+      </div>
+      </div>
+    </section>
+    <footer class="footer pb-0">
+      <div class="content has-text-white">
+        <p>
+          <strong class="has-text-white">Contributors</strong> : Christopher Gardner - Connor Bazil - Silvia Olinger</a> 
+        </p> 
+      </div>
+    </footer>
+</main>
 
 
-  <script src="assets/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
+    <script src="assets/javascript.js"></script>
+    
 </body>
 
 </html>

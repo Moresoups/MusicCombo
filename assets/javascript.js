@@ -1,20 +1,35 @@
-
 //rollingstones youtbechannel
-//channelId :UCB_Z6rBg3WW3NL4-QimhC2A 
+//channelId :UCB_Z6rBg3WW3NL4-QimhC2A
 //APIkey:AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0
-fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-	.then(data => data.json())
-	.then(list => console.log(list));
+//fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
+//	.then(data => data.json())
+//	.then(list => console.log(list));
 
 //rolling stones search
 
+// Searches local storage for combinations previously attempted
+const combinationHistory = JSON.parse(localStorage.getItem("combinationsUsed")) || []
+const combinationList = document.getElementById("combinationList");
+
+function loadLocalStorage () {
+	localStorage.getItem(combinationHistory)
+	console.log("combinationHistory", combinationHistory)
+	for (let i=0; i < combinationHistory.length; i++) {
+		const listItem = document.createElement("li")
+		listItem.innerHTML = combinationHistory[i];
+		combinationList.appendChild(listItem);
+	}
+}
+
+loadLocalStorage();
+
 
 const options1 = {
-	method: 'GET',
+	method: "GET",
 	headers: {
-		'X-RapidAPI-Key': 'ed0b354182msha048388c855c2fbp1f3ee1jsnebb54d352b31',
-		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-	}
+		"X-RapidAPI-Key": "ed0b354182msha048388c855c2fbp1f3ee1jsnebb54d352b31",
+		"X-RapidAPI-Host": "spotify23.p.rapidapi.com",
+	},
 };
 
 // const options2 = {
@@ -25,19 +40,27 @@ const options1 = {
 //     }
 // };
 
-const options3 = {
-	method: 'GET',
+const options = {
+	method: "GET",
 	headers: {
-		'X-RapidAPI-Key': 'ed0b354182msha048388c855c2fbp1f3ee1jsnebb54d352b31',
-		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-	}
+		"X-RapidAPI-Key": "ed0b354182msha048388c855c2fbp1f3ee1jsnebb54d352b31",
+		"X-RapidAPI-Host": "ytstream-download-youtube-videos.p.rapidapi.com",
+	},
 };
 
-const playList = document.querySelector("ul");
+//hide button when clicked
+
+const allBtns = document.getElementsByClassName("btn");
 const combineBtn = document.getElementById("combine");
 
-// Combine elements:
 
+for (let i=0; i < allBtns.length; i++) {
+	const currentBtn = allBtns[i]
+	currentBtn.addEventListener("click", () => {
+	currentBtn.style.display = "none";
+	});
+}
+// Combine elements:
 let Water = false;
 let Earth = false;
 let Wind = false;
@@ -56,250 +79,846 @@ function earth() {
 }
 
 function wind() {
-	Wind = !Wind
+	Wind = !Wind;
 	console.log("confirmed");
 }
 
 function fire() {
-	Fire = !Fire
+	Fire = !Fire;
 	console.log("confirmed");
 }
 
 function dark() {
-	Dark = !Dark
+	Dark = !Dark;
 	console.log("confirmed");
 }
 
 function light() {
-	Light = !Light
+	Light = !Light;
 	console.log("confirmed");
 }
-//songs combined function 
-
-function generateUrl() {
-	let bandName;
-	if ((Wind) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light == false)) {
-		bandName = "the%20rolling%20stones"
-	}
-	else if ((Wind) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
-		bandName = "Deepsky"
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
-		bandName = "red%20hot%20chili%20peppers"
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
-		bandName = "TOBACCO"
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
-		bandName = "the%20white%20stripes"
-	}
-	else if ((Wind == false) && (Earth) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
-		bandName = "The%20Heavy"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
-		bandName = "The%20Comet%20is%20Coming"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
-		bandName = "mf%20doom"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
-		bandName = "Planet%20Waves"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark) && (Light == false)) {
-		bandName = "cigarettes%20after%20sex"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light)) {
-		bandName = "Empire%20of%20the%20Sun"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light)) {
-		bandName = "The%20Midnight"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire) && (Dark == false) && (Light == false)) {
-		bandName = "Hillsong%20United"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark) && (Light == false)) {
-		bandName = "Agent%20Fresco"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light)) {
-		bandName = "creedence%20clearwater%20revival"
-	}
-	else {
-			console.log("Invalid selection. Please select two elements before clicking Combine!");
-			location.reload();
-		}
-	
-	return `https://spotify23.p.rapidapi.com/search/?q=${bandName}&type=albums&offset=0&limit=2&numberOfTopResults=2`
-
-}
-
-function generateUrl2() {
-	let youtubeName;
-	if ((Wind) && (Earth) && (!Water) && (Fire == false) && (Dark == false) && (Light == false)) {
-		youtubeName = 'UCB_Z6rBg3WW3NL4-QimhC2A'
-	}
-	else if ((Wind) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
-		youtubeName = 'UCo-3ThNQmPmQSQL_L6Lx1_w'
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
-		youtubeName = "UCEuOwB9vSL1oPKGNdONB4ig"
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
-		youtubeName = "UC1IJxltUbLLbjTPrkHQxnrg"
-	}
-	else if ((Wind) && (Earth == false) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
-		youtubeName = "UC0sQemK7pgX5fYy0k1MFsHg"
-	}
-	else if ((Wind == false) && (Earth) && (Water) && (Fire == false) && (Dark == false) && (Light == false)) {
-		youtubeName = "UCYDD7WruLEgEBfjxeor48aw"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire) && (Dark == false) && (Light == false)) {
-		youtubeName = "UCAxylzB43zb-5vESDQv9QxQ"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark) && (Light == false)) {
-		youtubeName = "UC6Y8dX3XdGsp2akU-SKfreA"
-	}
-	else if ((Wind == false) && (Earth) && (Water == false) && (Fire == false) && (Dark == false) && (Light)) {
-		youtubeName = "UCfZ5OqdpjhtD0OvR8P_nsGg"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark) && (Light == false)) {
-		youtubeName = "UCqNxhPZoLJ81i5QaK4nqn8A"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire) && (Dark == false) && (Light)) {
-		youtubeName = "UCyacMWc-JhzX6iq2PCF-4jw"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water == false) && (Fire == false) && (Dark) && (Light)) {
-		youtubeName = "UC-sM_PLqzgktdUcW2LEKKkQ"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire) && (Dark == false) && (Light == false)) {
-		youtubeName = "UC4q12NoPNySbVqwpw4iO5Vg"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark) && (Light == false)) {
-		youtubeName = "UC-PCZ7ffFGuaLc1xndULydw"
-	}
-	else if ((Wind == false) && (Earth == false) && (Water) && (Fire == false) && (Dark == false) && (Light)) {
-		youtubeName = "UC69yJGpLNIMk6_ECLwxBZwA"
-	}
-	else {
-		console.log("Invalid selection. Please select two elements before clicking Combine!");
-		
-	}
-	return 'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=' + youtubeName + '&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
 
 
-}
-
+//rolling stones
 function combine() {
-	const url1 = generateUrl();
-	fetch(url1, options1)
-		.then(res => res.json())
-		.then(data => console.log(data))
-		.catch(err => console.error(err))
-	const url2 = generateUrl2();
-	fetch(url2)
-		.then(res => res.json())
-		.then(data => console.log(data))
-		.catch(err => console.error(err))
-}
+	btn6.style.display = "none";
+	btn5.style.display = "none";
+	btn4.style.display = "none";
+	btn3.style.display = "none";
+	btn2.style.display = "none";
+	btn1.style.display = "none";
+	Combine.style.display = "none";
+
+	document.getElementById('FindMore').style.display = "";
+	document.getElementById('Refresh').style.display = "";
 
 
-function death() {
-	console.clear()
-	localStorage.clear();
-}
-
-//songs with fetch info
-
-
-
-// The Rolling Stones
-'https://spotify23.p.rapidapi.com/search/?q=the%20rolling%20stones&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-//The Heavy
-
-'https://spotify23.p.rapidapi.com/search/?q=The%20Heavy&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCYDD7WruLEgEBfjxeor48aw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
+	if (
+		Wind == true &&
+		Earth == true &&
+		Water == false &&
+		Fire == false &&
+		Dark == false &&
+		Light == false
+	) {
 
 
-//red hot chili peppers
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=rolling%20stones&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Wind & Earth - The Rolling Stones"
 
-'https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?channelId=UCEuOwB9vSL1oPKGNdONB4ig&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
+				// for (var i = 0; i < combinationHistory.length; i++) {
+				// combinationHistory.push(combination)
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 
-//the white stripes
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				// }
+				const spotify = document.getElementById("spotify");
+				const { profile, url, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<font size="+3">${profile.name}</font>
+					<div>
+					<font size="+3">Wind and Earth</font>
+					</div>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+					<div>
+          <font size="+2">This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment.</font>
+				</div>`;
+			})
+			.catch((err) => console.error(err));
 
-'https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC0sQemK7pgX5fYy0k1MFsHg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-//deepsky
-
-'https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCo-3ThNQmPmQSQL_L6Lx1_w&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-//tobacco
-
-'https://spotify23.p.rapidapi.com/search/?q=TOBACCO&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC1IJxltUbLLbjTPrkHQxnrg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-// MF DOOM
-
-'https://spotify23.p.rapidapi.com/search/?q=mf%20doom&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC6Y8dX3XdGsp2akU-SKfreA&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-// Planet Waves
-
-'https://spotify23.p.rapidapi.com/search/?q=Planet%20Waves&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCfZ5OqdpjhtD0OvR8P_nsGg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-// The comet is coming 
-
-'https://spotify23.p.rapidapi.com/search/?q=The%20Comet%20is%20Coming&type=albums&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCAxylzB43zb-5vESDQv9QxQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-// The Midnight (Dark/Light)
-
-'https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=multi&offset=0&limit=10&numberOfTopResults=5'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-sM_PLqzgktdUcW2LEKKkQ&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-// Cigarettes After Sex (Fire/Dark)
-
-'https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=multi&offset=0&limit=10&numberOfTopResults=5'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCqNxhPZoLJ81i5QaK4nqn8A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-// Empire of the Sun (Fire/Light)
-
-'https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=multi&offset=0&limit=10&numberOfTopResults=5'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCyacMWc-JhzX6iq2PCF-4jw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-//  Creedance Clearwater Revival
-
-'https://spotify23.p.rapidapi.com/search/?q=creedence%20clearwater&type=artists&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC69yJGpLNIMk6_ECLwxBZwA&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-// Agent Fresco
-
-'https://spotify23.p.rapidapi.com/search/?q=Agent%20Fresco&type=artists&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC-PCZ7ffFGuaLc1xndULydw&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-// Hillsong United
-
-'https://spotify23.p.rapidapi.com/search/?q=Hillsong%20United&type=artists&offset=0&limit=2&numberOfTopResults=2'
-'https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC4q12NoPNySbVqwpw4iO5Vg&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0'
-
-
-	
-
-	//clear all
-
-	function death() {
-		console.clear()
-		localStorage.clear();
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=YzjZEci-EiU",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}"  width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
 	}
 
+	//Deepsky
+	else if (
+		Wind == true &&
+		Earth == false &&
+		Water == true &&
+		Fire == false &&
+		Dark == false &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Wind & Water - Deepsky"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Wind and Water</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;" />
+          <h3>This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=CfwgK3D2Lo8",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//red hot chili peppers
+	else if (
+		Wind == true &&
+		Earth == false &&
+		Water == false &&
+		Fire == true &&
+		Dark == false &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers%20&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Wind & Fire - Red Hot Chili Peppers"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Wind and Fire</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=QOOiY0bgrlU",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//tobacco
+	else if (
+		Wind == true &&
+		Earth == false &&
+		Water == false &&
+		Fire == false &&
+		Dark == true &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=tobacco&type=artists&offset=0&limit=10&numberOfTopResults=5",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Wind & Dark - TOBACCO"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Wind and Dark</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>This is a warped combo, the music of an atelectatic lung in a great machine world whose design and purpose is so beyond our understanding it is supernatural. Fear and confusion are all that awaits you. But, that is still better than feeling nothing at all</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=td-Xzg5DDFI",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}"width = "640" height = "360"
+				frameborder = "0"
+				style = "border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//the white stripes need quote
+	else if (
+		Wind == true &&
+		Earth == false &&
+		Water == false &&
+		Fire == false &&
+		Dark == false &&
+		Light == true
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Wind & Light - The White Stripes"
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Wind and Light</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of freedom. Where you are flying through a clear bright sky where anything is possible. This is the music of dreams. Reality has no power in such a combination.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=1OjTspCqvk8",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//the comet is coming
+	else if (
+		Wind == false &&
+		Earth == true &&
+		Water == false &&
+		Fire == true &&
+		Dark == false &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=the%20comet%20is%20coming&type=artists&offset=0&limit=10&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Earth & Fire - The Comet is Coming"
+			
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Earth and Fire</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of creation, the titanic power and scale of the universe in which we are mere specks. What is the meaning of such life in the face of titanic forces? This is the music of Existentialism</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=G55GspnNkBo",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+
+	//the heavy
+	else if (
+		Wind == false &&
+		Earth == true &&
+		Water == true &&
+		Fire == false &&
+		Dark == false &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=the%20heavy&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Earth & Water - The Heavy"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Earth and Water</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>This combo is the sound of silence, peace and solitude in a world that insists you engage with it. In our times, women have always been left out of heady topics such as revolution and nationalism. Queers and people of color are anti-nationalist simply by existing. The people of earth and water are just here and that act does not need to be revolutionary to be just.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=GjTTB6yII4o",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//mf doom
+	else if (
+		Wind == false &&
+		Earth == true &&
+		Water == false &&
+		Fire == false &&
+		Dark == true &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=MF%20DOOM&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Earth & Dark - MF Doom"
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Earth and Dark</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of reality. Earth and Dark is the here and now, the struggle of all life and the beauty of the mundane. The music of community and the collective experience of society both good and bad</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=kHBHDWpK1yo",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+
+	//planet waves need quote
+	else if (
+		Wind == false &&
+		Earth == true &&
+		Water == false &&
+		Fire == false &&
+		Dark == false &&
+		Light == true
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=planet%20waves&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Earth & Light - Planet Waves"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Earth and Light</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of revelations, the light cracks the stone and all things kept underground are brought to light. This is the music of those that seek truths and the agony they often bring upon themselves.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=Frj2CLGldC4",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	//Band Hillsong United
+	//music - Another in the Water
+	else if (
+		Wind == false &&
+		Earth == false &&
+		Water == true &&
+		Fire == true &&
+		Dark == false &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=Hillsong%20United&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Water & Fire - Hillsong United"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Water and Fire</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>This is a combo of instant reaction, of gut feeling, of always moving and always decision making. It is a combo of always burning yourself out because water drowns fire and fire evaporates water. The music of Fire and Water is never still. It writhes under the skin and rings in the ears. chaos is its natural state.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=WUSsEo52-a0",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("YouTube", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+
+	//Agent Fresco
+	//music - Dark Water
+	else if (
+		Wind == false &&
+		Earth == false &&
+		Water == true &&
+		Fire == false &&
+		Dark == true &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=Agent%20Fresco&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Water & Dark - Agent Fresco"
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Water and Dark</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of peace. Dark has many negative connotations, but it can also be deep, safe and very gentle energy. The deep dark water returns us to the place we were before we were. The infinite amount of time where we did not exist.  It is the music of a great deep sea that welcomes all.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=1VmNTl6JvDY",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+            src="${youtubeLink}"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	} else if (
+		Wind == false &&
+		Earth == false &&
+		Water == true &&
+		Fire == false &&
+		Dark == false &&
+		Light == true
+	) {
+		//creedence clearwater revival
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=creedence%20clearwater&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Water & Light - Creedence Clearwater Revival"
+
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Water and Light</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>The combo of life. Water and light is a divine convergence where all things become balanced and all truths are made clear. The music of negative energy being washed away</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=u1V8YRJnr4Q",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+
+	//cigarettes after sex
+	else if (
+		Wind == false &&
+		Earth == false &&
+		Water == false &&
+		Fire == true &&
+		Dark == true &&
+		Light == false
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Fire & Dark - Cigarettes After Sex"
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Fire and Dark</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>A fire that produces no heat and casts no shadow. This combination is the opposite of existence, an endless void. This is the music of nothing, the heat death of the universe where all energy is spent and nothing can ever exist again.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=sElE_BfQ67s",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+            src="${youtubeLink}"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	// empire of the sun
+	else if (
+		Wind == false &&
+		Earth == false &&
+		Water == false &&
+		Fire == true &&
+		Dark == false &&
+		Light == true
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				const combination = "Fire & Light - Empire of the Sun"
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Fire and Light</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>A powerful combo that is as bright and brilliant as the sun. It burns bright and fades instantly. This is the music of miracles.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=epWP7_LCokI",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	}
+	// the midnight
+	else if (
+		Wind == false &&
+		Earth == false &&
+		Water == false &&
+		Fire == false &&
+		Dark == true &&
+		Light == true
+	) {
+		fetch(
+			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			options1
+		)
+			.then((response) => response.json())
+			.then((response) => {
+				console.log("response", response);
+				
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
+
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				
+				const spotify = document.getElementById("spotify");
+				const { profile, uri, visuals } = response.artists.items[0].data;
+				spotify.innerHTML = `
+					<h2>${profile.name}</h2>
+					<h3>Dark and Light</h3>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+          <h3>A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality.</h3>
+				`;
+			})
+			.catch((err) => console.error(err));
+
+		fetch(
+			"https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=_pUL7u-mYqA",
+			options
+		)
+			.then((response2) => response2.json())
+			.then((response2) => {
+				console.log("response2", response2);
+				const youtube = document.getElementById("youtube");
+				const { url: youtubeLink } = response2.adaptiveFormats[1];
+				youtube.innerHTML = `<iframe
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+          ></iframe>`;
+			})
+			.catch((err) => console.error(err));
+	} else if (
+		Wind == false &&
+		Earth == false &&
+		Water == false &&
+		Fire == false &&
+		Dark == false &&
+		Light == false
+	) {
+		console.log("no selection");
+	} else {
+		console.log("error");
+	}
+	//reset function
+	function Reset() {
+		window.location.reload();
+	}
+
+}
+
+
+//search function
+//Sys.setenv((SPOTIFY_CLIENT_ID = "96dc2bc1c09645d8af8883911f9c6ae7"));
+//Sys.setenv((SPOTIFY_CLIENT_SECRET = "d6b103e15d1e41758ae6fefc9cfdec8d"));
 
