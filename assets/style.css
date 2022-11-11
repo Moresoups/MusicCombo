@@ -75,7 +75,7 @@ body {
   cursor: pointer;
 }
 
-.E {
+#btn1 {
   background-color: rgb(145, 97, 52);
   border: black;
   color: white;
@@ -94,7 +94,7 @@ body {
   cursor: pointer;
 }
 
-.WA {
+#btn4 {
   background-color: rgb(0, 60, 255);
   border: black;
   color: white;
@@ -113,7 +113,7 @@ body {
   cursor: pointer;
 }
 
-.WI {
+#btn3 {
   background-color: rgb(69, 176, 226);
   border: black;
   color: white;
@@ -132,7 +132,7 @@ body {
   cursor: pointer;
 }
 
-.F {
+#btn2 {
   background-color: rgb(255, 51, 0);
   border: black;
   color: white;
@@ -152,7 +152,7 @@ body {
   cursor: pointer;
 }
 
-.D {
+#btn5 {
   background-color: black;
   border: black;
   color: white;
@@ -171,7 +171,7 @@ body {
   cursor: pointer;
 }
 
-.L {
+#btn6 {
   background-color: rgb(238, 238, 130);
   border: black;
   color: white;
@@ -190,12 +190,7 @@ body {
   cursor: pointer;
 }
 
-.L:hover,
-.E:hover,
-.WI:hover,
-.F:hover,
-.WA:hover,
-.D:hover {
+.btn:hover{
   background-image: linear-gradient(
     to right,
     red,
@@ -214,12 +209,7 @@ body {
     background-position: 20vw;
   }
 }
-.L:active,
-.E:active,
-.WI:active,
-.F:active,
-.WA:active,
-.D:hover {
+.btn:active{
   background-color: purple;
 }
 .activated {
