@@ -1,10 +1,3 @@
-//rollingstones youtbechannel
-//channelId :UCB_Z6rBg3WW3NL4-QimhC2A
-//APIkey:AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0
-//fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCB_Z6rBg3WW3NL4-QimhC2A&maxResults=1&key=AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0')
-//	.then(data => data.json())
-//	.then(list => console.log(list));
-
 //rolling stones search
 
 // Searches local storage for combinations previously attempted
@@ -18,14 +11,6 @@ const options1 = {
 	},
 };
 
-// const options2 = {
-//     method: 'GET',
-//     headers:{
-//         'Y-API-Key':'AIzaSyBvSlOj7atT9SC5BVN1Er896lGzME6Y6B0',
-//         'Y-API-Host':'https://developers.google.com/youtube/v3'
-//     }
-// };
-
 const options = {
 	method: "GET",
 	headers: {
@@ -36,7 +21,7 @@ const options = {
 
 //hide button when clicked
 
-const refresh = document.getElementById("btn6");
+const refresh = document.getElementById("combine");
 
 const btn1 = document.getElementById("btn1");
 btn1.addEventListener("click", () => {
@@ -106,11 +91,11 @@ function light() {
 	console.log("confirmed");
 }
 
-//songs combined function
+//combined songs variable - list for local storage
 
 const combinationList = document.getElementById("combinationList");
 
-//rolling stones
+//combinations function
 function combine() {
 	btn6.style.display = "none";
 	btn5.style.display = "none";
@@ -119,16 +104,7 @@ function combine() {
 	btn2.style.display = "none";
 	btn1.style.display = "none";
 	refresh.style.display = "none";
-	if (
-		Wind == true &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
-
-
+	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=rolling%20stones&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -137,14 +113,12 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Wind & Earth - The Rolling Stones"
-		
-				// for (var i = 0; i < combinationHistory.length; i++) {
-					combinationHistory.push(combination)
-					localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
-					const listItem = document.createElement("li")
-					listItem.innerHTML = combinationHistory;
-					combinationList.appendChild(listItem);
-				// }
+				combinationHistory.push(combination)
+				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				const listItem = document.createElement("li")
+				listItem.innerHTML = combinationHistory;
+				combinationList.appendChild(listItem);
+
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -173,14 +147,7 @@ function combine() {
 	}
 
 	//Deepsky
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -221,14 +188,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//red hot chili peppers
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers%20&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -268,14 +228,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//tobacco
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=tobacco&type=artists&offset=0&limit=10&numberOfTopResults=5",
 			options1
@@ -315,14 +268,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//the white stripes need quote
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (!Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -362,14 +308,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//the comet is coming
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20comet%20is%20coming&type=artists&offset=0&limit=10&numberOfTopResults=2",
 			options1
@@ -411,14 +350,7 @@ function combine() {
 	}
 
 	//the heavy
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (Water) && (!Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20heavy&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -458,14 +390,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//mf doom
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=MF%20DOOM&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -507,14 +432,7 @@ function combine() {
 	}
 
 	//planet waves need quote
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=planet%20waves&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -556,14 +474,7 @@ function combine() {
 	}
 	//Band Hillsong United
 	//music - Another in the Water
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Hillsong%20United&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -606,14 +517,7 @@ function combine() {
 
 	//Agent Fresco
 	//music - Dark Water
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Agent%20Fresco&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -652,14 +556,7 @@ function combine() {
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
-	} else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+			else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (Light)) {
 		//creedence clearwater revival
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=creedence%20clearwater&type=artists&offset=0&limit=2&numberOfTopResults=2",
@@ -702,14 +599,7 @@ function combine() {
 	}
 
 	//cigarettes after sex
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (!Water) && (Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -750,14 +640,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	// empire of the sun
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((!Wind) && (!Earth) && (!Water) && (Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -798,14 +681,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	// the midnight
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == true
-	) {
+	else if ((!Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
