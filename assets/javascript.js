@@ -136,13 +136,14 @@ function combine() {
 			.then((response) => response.json())
 			.then((response) => {
 				console.log("response", response);
-				var combination = "Wind & Earth - The Rolling Stones"
-				combinationHistory.push(combination)
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
-				var listItem = document.createElement("li")
-				var comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
-				combinationList.appendChild(listItem)
+				const combination = "Wind & Earth - The Rolling Stones"
+				// for (var i = 0; i < combinationHistory.length; i++) {
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				// }
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -190,8 +191,7 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
 				combinationList.appendChild(listItem)
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -239,8 +239,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -286,8 +286,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -333,8 +333,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -380,8 +380,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -429,8 +429,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -476,8 +476,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -525,8 +525,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -574,8 +574,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -624,8 +624,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -671,8 +671,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -720,8 +720,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -768,8 +768,8 @@ function combine() {
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -812,12 +812,12 @@ function combine() {
 			.then((response) => response.json())
 			.then((response) => {
 				console.log("response", response);
-				const combination = "Dark & light - The Midnight"
+				const combination = "Dark & Light - The Midnight"
 				combinationHistory.push(combination)
 				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
 				const listItem = document.createElement("li")
-				const comb = localStorage.getItem("combinationsUsed")
-				listItem.innerHTML = comb;
+				listItem.innerHTML = combination;
+				combinationList.appendChild(listItem);
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
