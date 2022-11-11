@@ -22,7 +22,10 @@ body {
     top: 50px;
     width: 100%;
   }
-  
+  #card{
+    position: absolute;
+    bottom:50px;
+  }
   .MERGE:before {
     content: "";
     background: linear-gradient(

@@ -63,12 +63,14 @@
         </div>
 
         </div>
+        <div class="columns is-mobile">
+          <div class="column is-full">
+          <button class="MERGE" onclick="combine();" role="button" id="combine">Combine!</button>
+            </div>
+            </div>
       </div>
     <div id="spotify" class="spotify"> </div>
-    <div class="columns is-mobile">
-    <div class="column is-full">
-    <button class="MERGE" onclick="combine();" role="button" id="combine">Combine!</button><div>
-      </div>
+    
     <button class="hidden" id="refresh" display="none">generate another song</button>
 <container>
     <div id="spotify" class="spotify"> </div>
@@ -76,22 +78,22 @@
     <section>
       <div class="column is-mobile">
         <div class="column is-one-quarter">
-      <div class="tile is-ancestor ">
-        <div class="tile is-vertical is-4 TITLE">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification-has-text-white">
-                <p class="subtitle">Your Combinations</p>
-              </article>
-              </div>
-              </div>
-              </div>
-              </div>
-              </div>
+          <div class="card" id="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Combinations
+              </p>
+            </header>
+            <div class="card-content ">
+      
+              <p class="subtitle">
+                List of combinations here
+              </p>
             </div>
-              </section>
+          </div>
+        </section>
    
-</main>
+
 <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
 <script src="assets/javascript.js"></script>
 </head>
