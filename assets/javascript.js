@@ -123,6 +123,7 @@ function combine() {
 	document.getElementById('FindMore').style.display = "";
 	document.getElementById('Refresh').style.display = "";
 
+
 	if (
 		Wind == true &&
 		Earth == true &&
@@ -152,11 +153,14 @@ function combine() {
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
-					<h2>${profile.name}</h2>
-					<h3>Wind and Earth</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
-          <h3>This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment.</h3>
-				`;
+					<font size="+3">${profile.name}</font>
+					<div>
+					<font size="+3">Wind and Earth</font>
+					</div>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+					<div>
+          <font size="+2">This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment.</font>
+				</div>`;
 			})
 			.catch((err) => console.error(err));
 
@@ -170,7 +174,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}"  width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -203,7 +209,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Wind and Water</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;" />
           <h3>This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</h3>
 				`;
 			})
@@ -219,7 +225,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -251,7 +259,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Wind and Fire</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration.</h3>
 				`;
 			})
@@ -266,7 +274,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -298,7 +308,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Wind and Dark</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>This is a warped combo, the music of an atelectatic lung in a great machine world whose design and purpose is so beyond our understanding it is supernatural. Fear and confusion are all that awaits you. But, that is still better than feeling nothing at all</h3>
 				`;
 			})
@@ -313,7 +323,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}"width = "640" height = "360"
+				frameborder = "0"
+				style = "border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -345,7 +357,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Wind and Light</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of freedom. Where you are flying through a clear bright sky where anything is possible. This is the music of dreams. Reality has no power in such a combination.</h3>
 				`;
 			})
@@ -392,7 +404,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Earth and Fire</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of creation, the titanic power and scale of the universe in which we are mere specks. What is the meaning of such life in the face of titanic forces? This is the music of Existentialism</h3>
 				`;
 			})
@@ -408,7 +420,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -441,7 +455,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Earth and Water</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>This combo is the sound of silence, peace and solitude in a world that insists you engage with it. In our times, women have always been left out of heady topics such as revolution and nationalism. Queers and people of color are anti-nationalist simply by existing. The people of earth and water are just here and that act does not need to be revolutionary to be just.</h3>
 				`;
 			})
@@ -456,7 +470,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -488,7 +504,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Earth and Dark</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of reality. Earth and Dark is the here and now, the struggle of all life and the beauty of the mundane. The music of community and the collective experience of society both good and bad</h3>
 				`;
 			})
@@ -504,7 +520,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -537,7 +555,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Earth and Light</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of revelations, the light cracks the stone and all things kept underground are brought to light. This is the music of those that seek truths and the agony they often bring upon themselves.</h3>
 				`;
 			})
@@ -553,7 +571,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -586,7 +606,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Water and Fire</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>This is a combo of instant reaction, of gut feeling, of always moving and always decision making. It is a combo of always burning yourself out because water drowns fire and fire evaporates water. The music of Fire and Water is never still. It writhes under the skin and rings in the ears. chaos is its natural state.</h3>
 				`;
 			})
@@ -602,7 +622,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -636,7 +658,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Water and Dark</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of peace. Dark has many negative connotations, but it can also be deep, safe and very gentle energy. The deep dark water returns us to the place we were before we were. The infinite amount of time where we did not exist.  It is the music of a great deep sea that welcomes all.</h3>
 				`;
 			})
@@ -651,7 +673,9 @@ function combine() {
 				console.log("response2", response2);
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
-				youtube.innerHTML = `<iframe
+				youtube.innerHTML = `<iframe width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
             src="${youtubeLink}"
           ></iframe>`;
 			})
@@ -683,7 +707,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Water and Light</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>The combo of life. Water and light is a divine convergence where all things become balanced and all truths are made clear. The music of negative energy being washed away</h3>
 				`;
 			})
@@ -699,7 +723,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -732,7 +758,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Fire and Dark</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>A fire that produces no heat and casts no shadow. This combination is the opposite of existence, an endless void. This is the music of nothing, the heat death of the universe where all energy is spent and nothing can ever exist again.</h3>
 				`;
 			})
@@ -747,7 +773,9 @@ function combine() {
 				console.log("response2", response2);
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
-				youtube.innerHTML = `<iframe
+				youtube.innerHTML = `<iframe width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
             src="${youtubeLink}"
           ></iframe>`;
 			})
@@ -780,7 +808,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Fire and Light</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>A powerful combo that is as bright and brilliant as the sun. It burns bright and fades instantly. This is the music of miracles.</h3>
 				`;
 			})
@@ -796,7 +824,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -828,7 +858,7 @@ function combine() {
 				spotify.innerHTML = `
 					<h2>${profile.name}</h2>
 					<h3>Dark and Light</h3>
-					<img src="${visuals.avatarImage.sources[1].url}" />
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
           <h3>A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality.</h3>
 				`;
 			})
@@ -844,7 +874,9 @@ function combine() {
 				const youtube = document.getElementById("youtube");
 				const { url: youtubeLink } = response2.adaptiveFormats[1];
 				youtube.innerHTML = `<iframe
-            src="${youtubeLink}"
+            src="${youtubeLink}" width="640" height="360"
+        frameborder="0"
+        style="border: solid 4px #37474F"
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
@@ -861,8 +893,15 @@ function combine() {
 		console.log("error");
 	}
 	//reset function
-	function reset() {
+	function Reset() {
 		window.location.reload();
 	}
 
 }
+
+
+//search function
+//Sys.setenv((SPOTIFY_CLIENT_ID = "96dc2bc1c09645d8af8883911f9c6ae7"));
+//Sys.setenv((SPOTIFY_CLIENT_SECRET = "d6b103e15d1e41758ae6fefc9cfdec8d"));
+
+

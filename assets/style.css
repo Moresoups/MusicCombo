@@ -190,7 +190,7 @@ body {
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   background-image: linear-gradient(
     to right,
     red,
@@ -209,7 +209,7 @@ body {
     background-position: 20vw;
   }
 }
-.btn:active{
+.btn:active {
   background-color: purple;
 }
 .activated {
@@ -221,8 +221,6 @@ body {
   position: relative;
   top: 50px;
   color: rgb(137, 4, 4);
-  font-size: large;
-  background: #111;
 }
 
 .hero {
