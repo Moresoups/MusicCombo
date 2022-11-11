@@ -22,6 +22,7 @@ const options = {
 //hide button when clicked
 
 const refresh = document.getElementById("combine");
+const allBtn = document.getElementsByClassName("btn");
 
 const btn1 = document.getElementById("btn1");
 btn1.addEventListener("click", () => {
@@ -94,7 +95,7 @@ function light() {
 //combined songs variable - list for local storage
 
 const combinationList = document.getElementById("combinationList");
-
+const heroHead=document.getElementsByClassName("hero-head")
 //combinations function
 function combine() {
 	btn6.style.display = "none";
@@ -556,7 +557,7 @@ function combine() {
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
-			else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (Light)) {
+		} else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (Light)) {
 		//creedence clearwater revival
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=creedence%20clearwater&type=artists&offset=0&limit=2&numberOfTopResults=2",
