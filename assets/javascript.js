@@ -53,9 +53,10 @@ let Wind = false;
 let Fire = false;
 let Dark = false;
 let Light = false;
-
+let key =""
 function water() {
 	Water = !Water;
+	key+="water-"
 	console.log("confirmed");
 }
 
@@ -88,127 +89,131 @@ function light() {
 
 //combinations function
 
-// function combine2() {
-// 	const options = {
-// 		windEarth: {
-// 			combination: "Wind and Earth - The Rolling Stones",
-// 			urlInputS: "rolling%20stones",
-// 			urlInputYt:"YzjZEci-EiU",
-// 			quote: "This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment."
-// 		},
-// 		windWater: {
-// 			combination: "Wind and Water - Deepsky",
-// 			urlInputS: "Deepsky",
-// 			urlInputYt:"CfwgK3D2Lo8",
-// 			quote: "This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself."
-// 		},		
-// 		windFire: {
-// 			combination: "Wind and Fire - Red Hot Chili Peppers",
-// 			urlInputS: "red%20hot%20chili%20peppers",
-// 			urlInputYt:"QOOiY0bgrlU",
-// 			quote: "This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration."
-// 		},		
-// 		windDark: {
-// 			combination: "Wind and Dark - TOBACCO",
-// 			urlInputS: "tobacco",
-// 			urlInputYt:"td-Xzg5DDFI",
-// 			quote: "This is a warped combo, the music of an atelectatic lung in a great machine world whose design and purpose is so beyond our understanding it is supernatural. Fear and confusion are all that awaits you. But, that is still better than feeling nothing at all."
-// 		},
-// 		windLight: {
-// 			combination: "Wind and Light - The White Stripes",
-// 			urlInputS: "the%20white%20stripes",
-// 			urlInputYt: "1OjTspCqvk8",
-// 			quote: "The combo of freedom. Where you are flying through a clear bright sky where anything is possible. This is the music of dreams. Reality has no power in such a combination."
-// 		},
-// 		earthFire: {
-// 			combination: "Earth and Fire - The Comet is Coming",
-// 			urlInputS: "the%20comet%20is%20coming",
-// 			urlInputYt: "G55GspnNkBo",
-// 			quote: "The combo of creation, the titanic power and scale of the universe in which we are mere specks. What is the meaning of such life in the face of titanic forces? This is the music of Existentialism."
-// 		},
-// 		earthWater: {
-// 			combination: "Earth and Water - The Heavy",
-// 			urlInputS: "the%20heavy",
-// 			urlInputYt: "GjTTB6yII4o",
-// 			quote: "This combo is the sound of silence, peace and solitude in a world that insists you engage with it. In our times, women have always been left out of heady topics such as revolution and nationalism. Queers and people of color are anti-nationalist simply by existing. The people of earth and water are just here and that act does not need to be revolutionary to be just."
-// 		},
-// 		earthDark: {
-// 			combination: "Earth and Dark - MF DOOM",
-// 			urlInputS: "mf%20doom",
-// 			urlInputYt: "kHBHDWpK1yo",
-// 			quote: "The combo of reality. Earth and Dark is the here and now, the struggle of all life and the beauty of the mundane. The music of community and the collective experience of society both good and bad."
-// 		},
-// 		earthLight: {
-// 			combination: "Earth and Light - Planet Waves",
-// 			urlInputS: "planet%20waves",
-// 			urlInputYt:"Frj2CLGldC4",
-// 			quote: "The combo of revelations, the light cracks the stone and all things kept underground are brought to light. This is the music of those that seek truths and the agony they often bring upon themselves."
-// 		},
-// 		waterFire: {
-// 			combination: "Water and Fire - Hillsong United",
-// 			urlInputS: "hillsong%20united",
-// 			urlInputYt:"WUSsEo52-a0",
-// 			quote: "This is a combo of instant reaction, of gut feeling, of always moving and always decision making. It is a combo of always burning yourself out because water drowns fire and fire evaporates water. The music of Fire and Water is never still. It writhes under the skin and rings in the ears. chaos is its natural state."
-// 		},
-// 		waterDark: {
-// 			combination: "Water and Dark - Agent Fresco",
-// 			urlInputS: "Agent%20Fresco",
-// 			urlInputYt:"1VmNTl6JvDY",
-// 			quote: "The combo of peace. Dark has many negative connotations, but it can also be deep, safe and very gentle energy. The deep dark water returns us to the place we were before we were. The infinite amount of time where we did not exist.  It is the music of a great deep sea that welcomes all."
-// 		},
-// 		waterLight: {
-// 			combination: "Water and Light - Creedence Clearwater Revival",
-// 			urlInputS: "creedence%20clearwater%20revival",
-// 			urlInputYt:"u1V8YRJnr4Q",
-// 			quote: "The combo of life. Water and light is a divine convergence where all things become balanced and all truths are made clear. The music of negative energy being washed away."
-// 		},
-// 		fireLight: {
-// 			combination: "Fire and Light - Empire of the Sun",
-// 			urlInputS: "empire%20of%20the%20sun",
-// 			urlInputYt:"epWP7_LCokI",
-// 			quote: "A powerful combo that is as bright and brilliant as the sun. It burns bright and fades instantly. This is the music of miracles."
-// 		},
-// 		fireDark: {
-// 			combination: "Fire and Dark - Cigarettes After Sex",
-// 			urlInputS: "cigarettes%20after%20sex",
-// 			urlInputYt:"sElE_BfQ67s",
-// 			quote: "A fire that produces no heat and casts no shadow. This combination is the opposite of existence, an endless void. This is the music of nothing, the heat death of the universe where all energy is spent and nothing can ever exist again."
-// 		},
-// 		darkLight: {
-// 			combination: "Dark and Light - The Midnight",
-// 			urlInputS: "the%20midnight",
-// 			urlInputYt:"_pUL7u-mYqA",
-// 			quote: "A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality."
-// 		},
-// 	}
-// 	for (let i=0; i < allBtns.length; i++) {
-// 		const currentBtn = allBtns[i]
-// 		currentBtn.style.display = "none";
-// 		refresh.style.display = "block";
-// 		}
-// 	let currentOption = {}
-// 	if ((Wind) && (Earth)) {
-// 		currentOption = options.windEarth;
-// 		console.log("I ran ", currentOption)
-// 	} else if (Wind) && (Water) {
-// 		currentOption = options.windWater;
-// 		console.log("I ran ", currentOption)
-// 	} else if (Wind) && (Fire) {
-// 		currentOption = options.windFire;
-// 		console.log("I ran ", currentOption)
-// 	} else if (Wind) && (Dark) {
-// 		currentOption = options.windDark;
-// 		console.log("I ran ", currentOption)
-// 	} else if (Wind) && (Light) {
-// 		currentOption = options.windLight;
-// 		console.log("I ran ", currentOption)
-// 	} else if (
-	// 	(Wind == false && Earth == false && Water == false && Fire == false && Dark == false && Light == false) {
-	// 	console.log("no selection");
-	// } else {
-	// 	console.log("error");
-// }
-// for (let i=0; i < )
+function combine2() {
+	const options = [
+		windEarth: {
+			combination: "Wind and Earth - The Rolling Stones",
+			urlInputS: "rolling%20stones",
+			urlInputYt:"YzjZEci-EiU",
+			quote: "This combo is often misconstrued as a tragic one. The certainty of the earth is relentlessly carved away by the persistent motion of the wind. all things fade, but there is liberation in finality. This is the music of true perspective and enlightenment."
+		},
+		windWater: {
+			combination: "Wind and Water - Deepsky",
+			urlInputS: "Deepsky",
+			urlInputYt:"CfwgK3D2Lo8",
+			quote: "This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself."
+		},		
+		windFire: {
+			combination: "Wind and Fire - Red Hot Chili Peppers",
+			urlInputS: "red%20hot%20chili%20peppers",
+			urlInputYt:"QOOiY0bgrlU",
+			quote: "This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration."
+		},		
+		windDark: {
+			combination: "Wind and Dark - TOBACCO",
+			urlInputS: "tobacco",
+			urlInputYt:"td-Xzg5DDFI",
+			quote: "This is a warped combo, the music of an atelectatic lung in a great machine world whose design and purpose is so beyond our understanding it is supernatural. Fear and confusion are all that awaits you. But, that is still better than feeling nothing at all."
+		},
+		windLight: {
+			combination: "Wind and Light - The White Stripes",
+			urlInputS: "the%20white%20stripes",
+			urlInputYt: "1OjTspCqvk8",
+			quote: "The combo of freedom. Where you are flying through a clear bright sky where anything is possible. This is the music of dreams. Reality has no power in such a combination."
+		},
+		earthFire: {
+			combination: "Earth and Fire - The Comet is Coming",
+			urlInputS: "the%20comet%20is%20coming",
+			urlInputYt: "G55GspnNkBo",
+			quote: "The combo of creation, the titanic power and scale of the universe in which we are mere specks. What is the meaning of such life in the face of titanic forces? This is the music of Existentialism."
+		},
+		earthWater: {
+			combination: "Earth and Water - The Heavy",
+			urlInputS: "the%20heavy",
+			urlInputYt: "GjTTB6yII4o",
+			quote: "This combo is the sound of silence, peace and solitude in a world that insists you engage with it. In our times, women have always been left out of heady topics such as revolution and nationalism. Queers and people of color are anti-nationalist simply by existing. The people of earth and water are just here and that act does not need to be revolutionary to be just."
+		},
+		earthDark: {
+			combination: "Earth and Dark - MF DOOM",
+			urlInputS: "mf%20doom",
+			urlInputYt: "kHBHDWpK1yo",
+			quote: "The combo of reality. Earth and Dark is the here and now, the struggle of all life and the beauty of the mundane. The music of community and the collective experience of society both good and bad."
+		},
+		earthLight: {
+			combination: "Earth and Light - Planet Waves",
+			urlInputS: "planet%20waves",
+			urlInputYt:"Frj2CLGldC4",
+			quote: "The combo of revelations, the light cracks the stone and all things kept underground are brought to light. This is the music of those that seek truths and the agony they often bring upon themselves."
+		},
+		waterFire: {
+			combination: "Water and Fire - Hillsong United",
+			urlInputS: "hillsong%20united",
+			urlInputYt:"WUSsEo52-a0",
+			quote: "This is a combo of instant reaction, of gut feeling, of always moving and always decision making. It is a combo of always burning yourself out because water drowns fire and fire evaporates water. The music of Fire and Water is never still. It writhes under the skin and rings in the ears. chaos is its natural state."
+		},
+		waterDark: {
+			combination: "Water and Dark - Agent Fresco",
+			urlInputS: "Agent%20Fresco",
+			urlInputYt:"1VmNTl6JvDY",
+			quote: "The combo of peace. Dark has many negative connotations, but it can also be deep, safe and very gentle energy. The deep dark water returns us to the place we were before we were. The infinite amount of time where we did not exist.  It is the music of a great deep sea that welcomes all."
+		},
+		waterLight: {
+			combination: "Water and Light - Creedence Clearwater Revival",
+			urlInputS: "creedence%20clearwater%20revival",
+			urlInputYt:"u1V8YRJnr4Q",
+			quote: "The combo of life. Water and light is a divine convergence where all things become balanced and all truths are made clear. The music of negative energy being washed away."
+		},
+		fireLight: {
+			combination: "Fire and Light - Empire of the Sun",
+			urlInputS: "empire%20of%20the%20sun",
+			urlInputYt:"epWP7_LCokI",
+			quote: "A powerful combo that is as bright and brilliant as the sun. It burns bright and fades instantly. This is the music of miracles."
+		},
+		fireDark: {
+			combination: "Fire and Dark - Cigarettes After Sex",
+			urlInputS: "cigarettes%20after%20sex",
+			urlInputYt:"sElE_BfQ67s",
+			quote: "A fire that produces no heat and casts no shadow. This combination is the opposite of existence, an endless void. This is the music of nothing, the heat death of the universe where all energy is spent and nothing can ever exist again."
+		},
+		{  
+			water:false,
+			dark:true,
+			light:true,
+			title: "darkLight",
+			combination: "Dark and Light - The Midnight",
+			urlInputS: "the%20midnight",
+			urlInputYt:"_pUL7u-mYqA",
+			quote: "A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality."
+		},
+	]
+	for (let i=0; i < allBtns.length; i++) {
+		const currentBtn = allBtns[i]
+		currentBtn.style.display = "none";
+		refresh.style.display = "block";
+		}
+	let currentOption = {}
+	if ((Wind) && (Earth)) {
+		currentOption = options.windEarth;
+		console.log("I ran ", currentOption)
+	} else if (Wind) && (Water) {
+		currentOption = options.windWater;
+		console.log("I ran ", currentOption)
+	} else if (Wind) && (Fire) {
+		currentOption = options.windFire;
+		console.log("I ran ", currentOption)
+	} else if (Wind) && (Dark) {
+		currentOption = options.windDark;
+		console.log("I ran ", currentOption)
+	} else if (Wind) && (Light) {
+		currentOption = options.windLight;
+		console.log("I ran ", currentOption)
+	} else if (
+		(Wind == false && Earth == false && Water == false && Fire == false && Dark == false && Light == false) {
+		console.log("no selection");
+	} else {
+		console.log("error");
+}
+for (let i=0; i < )
 // 	fetch("https://spotify23.p.rapidapi.com/search/?q="${urlInputS}"&type=artists&offset=0&limit=2&numberOfTopResults=2",
 // 		options1
 // 	)
@@ -269,7 +274,7 @@ function combine() {
 	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		console.log(Wind, "wind")
 		fetch(
-			"https://spotify23.p.rapidapi.com/search/?q=rolling%20stones&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			"https://spotify23.p.rapidapi.com/search/?q="rolling%20stones"&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
 		)
 			.then((response) => response.json())
