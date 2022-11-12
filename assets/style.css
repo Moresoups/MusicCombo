@@ -29,7 +29,7 @@ body {
     font-size: 70px;
     top: 50px;
     width: 100%;
-  
+   display: inline-block
   }
   #card{
     position: absolute;
@@ -96,6 +96,8 @@ body {
     border: black;
     color: white;
     padding: 20px;
+    width: 210px;
+     height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -113,7 +115,9 @@ body {
     background-color: rgb(0, 60, 255);
     border: black;
     color: white;
-    padding: 20px;
+    
+    width: 210px;
+     height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -124,7 +128,6 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
     position: relative;
-    top: 30px;
     cursor: pointer;
   }
   
@@ -133,6 +136,8 @@ body {
     border: black;
     color: white;
     padding: 20px;
+    width: 210px;
+     height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -143,7 +148,6 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
     position: relative;
-    top: 30px;
     cursor: pointer;
   }
    .container{
@@ -154,20 +158,18 @@ body {
     background-color: rgb(255, 51, 0);
     border: black;
     color: white;
-     width: 200px;
+     width: 210px;
      height: 100px;
     padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 40px;
-    margin: 40px 20px;
     font-weight: normal;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     border-radius: 100%;
     position: relative;
-    top: 1px;
     cursor: pointer;
   }
   
@@ -175,7 +177,7 @@ body {
     background-color: black;
     border: black;
     color: white;
-    width: 200px;
+    width: 210px;
      height: 100px;
     padding: 20px;
     text-align: center;
@@ -188,7 +190,7 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
     position: relative;
-    top: 30px;
+    
     cursor: pointer;
   }
   
@@ -197,6 +199,8 @@ body {
     border: black;
     color: white;
     padding: 20px;
+    width: 210px;
+     height: 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
