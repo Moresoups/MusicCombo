@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elemental Music Maker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
   <section class="hero is-medium">
     <h1 class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
     <div class="hero-head">
+      </div>
+      </section>
+      <section class="section">
       <div class="container">
         <div class="columns is-variable is-0-mobile">
           <div class="column is-full">
@@ -61,29 +64,32 @@
         </div>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+      </section>
     <div id="spotify" class="spotify"> </div>
-    
-    <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
+    <section class="section">
+      <div class ="container">
+      <div class="columns is-variable is-0-mobile">
+        <div class="column is-full">
+        <button class="MERGE" onclick="combine();" role="button" id="combine">Combine!</button>
+          </div>
+          </div>
+          </div>
+    </div>
    <button class="MERGE"  onclick="Reset();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
-<container>
+   </section>
+   <container>
     <div id="spotify" class="spotify is-4"> </div>
     </container>
 <section class="top-banner" style="display:none;" id="FindMore">
 <div class='container'>        
-
   <input type=”text” id=”trackInput”>
   <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
   <section id="playAudioHere"></section>
 </section>
-<section class="section">
-  <div class="container">
-  <div class="column is- is-multiline">
+
+<section class="section pb-10">
+ <div class="container">
+  <div id="col-card" class="columns is- is-multiline">
     <div class="column is-one-fifth">
       <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
         <header class="card-header has-background-grey-dark ">
@@ -94,6 +100,8 @@
         <div class="card-content ">
           <ul id="combinationList"></ul>
         </div>
+      </div>
+      </div>
       </div>
       </div>
     </section>

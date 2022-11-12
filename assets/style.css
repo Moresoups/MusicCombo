@@ -5,14 +5,18 @@ body {
     background-color: #111;
   }
   .footer{
-    background-color: #212121;
+    background-color: #111;
     
   }
-  
+#col-card{
+  background-color: #111;
+
+}
   .MERGE {
     padding: 0.6em 2em;
     border: none;
     outline: none;
+    text-justify: center;
     color: rgb(255, 255, 255);
     background: #111;
     cursor: pointer;
@@ -25,11 +29,15 @@ body {
     font-size: 70px;
     top: 50px;
     width: 100%;
+  
   }
   #card{
     position: absolute;
-    
   }
+  
+  
+    
+  
   .MERGE:before {
     content: "";
     background: linear-gradient(
@@ -98,7 +106,6 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
     position: relative;
-    top: 30px;
     cursor: pointer;
   }
   
@@ -139,8 +146,11 @@ body {
     top: 30px;
     cursor: pointer;
   }
-  
-  .F {
+   .container{
+    background-color:#212121;
+
+   }
+  .F { 
     background-color: rgb(255, 51, 0);
     border: black;
     color: white;
@@ -197,7 +207,6 @@ body {
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
     position: relative;
-    top: 30px;
     cursor: pointer;
   }
   
