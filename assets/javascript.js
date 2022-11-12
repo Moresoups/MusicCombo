@@ -8,7 +8,7 @@
 //rolling stones search
 
 // Searches local storage for combinations previously attempted
-const combinationHistory = JSON.parse(localStorage.getItem("combinationsUsed")) || []
+const combinationHistory = JSON.parse(localStorage.getItem("combinationHistory")) || []
 const combinationList = document.getElementById("combinationList");
 
 function loadLocalStorage () {
@@ -133,13 +133,17 @@ function combine() {
 				const combination = "Wind & Earth - The Rolling Stones"
 
 				// for (var i = 0; i < combinationHistory.length; i++) {
-				// combinationHistory.push(combination)
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+					if(combinationHistory.indexOf(combination) === -1){
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+						combinationHistory.push(combination)
+						localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+						const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+					}
+				
+				
+
 				// }
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
@@ -191,11 +195,13 @@ function combine() {
 				console.log("response", response);
 				const combination = "Wind & Water - Deepsky"
 
+				combinationHistory.push(combination)
 				const listItem = document.createElement("li")
 				listItem.innerHTML = combination;
 				combinationList.appendChild(listItem);
+			
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				localStorage.setItem("combinations", JSON.stringify(combinationHistory))
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
