@@ -11,10 +11,10 @@
 const combinationHistory = JSON.parse(localStorage.getItem("combinationHistory")) || []
 const combinationList = document.getElementById("combinationList");
 
-function loadLocalStorage () {
+function loadLocalStorage() {
 	localStorage.getItem(combinationHistory)
 	console.log("combinationHistory", combinationHistory)
-	for (let i=0; i < combinationHistory.length; i++) {
+	for (let i = 0; i < combinationHistory.length; i++) {
 		const listItem = document.createElement("li")
 		listItem.innerHTML = combinationHistory[i];
 		combinationList.appendChild(listItem);
@@ -54,10 +54,10 @@ const allBtns = document.getElementsByClassName("btn");
 const combineBtn = document.getElementById("combine");
 
 
-for (let i=0; i < allBtns.length; i++) {
+for (let i = 0; i < allBtns.length; i++) {
 	const currentBtn = allBtns[i]
 	currentBtn.addEventListener("click", () => {
-	currentBtn.style.display = "none";
+		currentBtn.style.display = "none";
 	});
 }
 // Combine elements:
@@ -133,16 +133,16 @@ function combine() {
 				const combination = "Wind & Earth - The Rolling Stones"
 
 				// for (var i = 0; i < combinationHistory.length; i++) {
-					if(combinationHistory.indexOf(combination) === -1){
+				if (combinationHistory.indexOf(combination) === -1) {
 
-						combinationHistory.push(combination)
-						localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
-						const listItem = document.createElement("li")
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
 					listItem.innerHTML = combination;
 					combinationList.appendChild(listItem);
-					}
-				
-				
+				}
+
+
 
 				// }
 				const spotify = document.getElementById("spotify");
@@ -195,13 +195,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Wind & Water - Deepsky"
 
-				combinationHistory.push(combination)
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
-			
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinations", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -249,12 +250,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Wind & Fire - Red Hot Chili Peppers"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
-
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -300,11 +303,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Wind & Dark - TOBACCO"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -350,12 +356,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Wind & Light - The White Stripes"
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -399,12 +408,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Earth & Fire - The Comet is Coming"
-			
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -453,11 +465,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Earth & Water - The Heavy"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -503,12 +518,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Earth & Dark - MF Doom"
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -557,11 +575,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Earth & Light - Planet Waves"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -610,11 +631,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Water & Fire - Hillsong United"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -663,12 +687,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Water & Dark - Agent Fresco"
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -715,11 +742,14 @@ function combine() {
 				console.log("response", response);
 				const combination = "Water & Light - Creedence Clearwater Revival"
 
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				if (combinationHistory.indexOf(combination) === -1) {
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -767,12 +797,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Fire & Dark - Cigarettes After Sex"
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -819,12 +852,15 @@ function combine() {
 			.then((response) => {
 				console.log("response", response);
 				const combination = "Fire & Light - Empire of the Sun"
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
 
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
@@ -870,13 +906,17 @@ function combine() {
 			.then((response) => response.json())
 			.then((response) => {
 				console.log("response", response);
-				
-				const listItem = document.createElement("li")
-				listItem.innerHTML = combination;
-				combinationList.appendChild(listItem);
+				const combination = "Dark & Light - The Midnight"
 
-				localStorage.setItem("combinationsUsed", JSON.stringify(combinationHistory))
-				
+				if (combinationHistory.indexOf(combination) === -1) {
+
+					combinationHistory.push(combination)
+					localStorage.setItem("combinationHistory", JSON.stringify(combinationHistory))
+					const listItem = document.createElement("li")
+					listItem.innerHTML = combination;
+					combinationList.appendChild(listItem);
+				}
+
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
