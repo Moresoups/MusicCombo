@@ -5,6 +5,14 @@ body {
   background-color: #111;
 }
 
+.footer {
+  background-color: #212121;
+}
+
+#card {
+  position: absolute;
+}
+
 .MERGE {
   padding: 0.6em 2em;
   border: none;

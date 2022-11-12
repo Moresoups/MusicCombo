@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Elemental Music Maker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -31,13 +31,13 @@
         <div id="youtube"></div>
         <div class="columns is-mobile">
           <div class="column is-one-quarter">
-            <button class="WI" style='margin-right:50px' id="btn3" onclick="wind();">
+            <button class="btn" style='margin-right:50px' id="btn3" onclick="wind();">
               <i class="fa-solid fa-wind"></i>
               Wind</button>
           </div>
           <div class="column is-4 is-offset-6">
             <button class="btn" style='margin-right:50px' id="btn4" onclick="water();">
-              <i class="fa-solid fa-fire"></i>
+              <i class="fa-solid fa-tint"></i>
               Water </button>
           </div>
 
@@ -67,7 +67,6 @@
     </div>
     </div>
     </div>
-    <ul id="combinationList"></ul>
     <div id="spotify" class="spotify"> </div>
     
     <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
@@ -82,6 +81,29 @@
   <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
   <section id="playAudioHere"></section>
 </section>
+<section class="section">
+  <div class="container">
+  <div class="column is- is-multiline">
+    <div class="column is-one-fifth">
+      <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
+        <header class="card-header has-background-grey-dark ">
+          <p class= "card-header-title subtitle has-text-white is-centered">
+            Combinations
+          </p>
+        </header>
+        <div class="card-content ">
+          <ul id="combinationList"></ul>
+        </div>
+      </div>
+      </div>
+    </section>
+    <footer class="footer pb-0">
+      <div class="content has-text-white">
+        <p>
+          <strong class="has-text-white">Contributors</strong> : Christopher Gardner - Connor Bazil - Silvia Olinger</a> 
+        </p> 
+      </div>
+    </footer>
 </main>
 
 
@@ -91,3 +113,17 @@
 </body>
 
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
