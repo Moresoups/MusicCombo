@@ -9,8 +9,12 @@ body {
   background-color: #212121;
 }
 
+#col-card{
+  background-color: #111;
+}
+
 #card{
-  position: absolute;
+  position: relative;
 }
 
 .MERGE {
