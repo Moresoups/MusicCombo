@@ -14,11 +14,27 @@ The user will also be able to see which combinations they have already attempted
 * **I WANT** an interactive and unique way to discover new artists
 * **SO THAT** I can enjoy the process of finding fresh music
 
-## Screenshots
+## Screenshots/Steps
 
 * Home/Elements Page
 
-* Result Page
+![Homepage](./assets/images/musiccombohomepage.html.png)
+
+* First Button Pressed
+
+![ClickEarth](./assets/images/clickearth.html.png)
+
+* Second Button Pressed
+
+![ClickFire](./assets/images/clickfire.html.png)
+
+* Combine/Result Page
+
+![Combine](./assets/images/combinecometiscoming.html.png)
+
+* Do Another Cmbination Page
+
+![Combine](./assets/images/doanothercombination.html.png)
 
 ## Technologies Used
 
