@@ -81,6 +81,7 @@ let Light = false;
 function water() {
 	Water = !Water;
 	console.log("confirmed");
+	btn4.style.display = "none";
 	if (Wind == true ||
 		Earth == true ||
 		Light == true ||
@@ -88,7 +89,6 @@ function water() {
 		Dark == true) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
-		btn4.style.display = "none";
 		btn3.style.display = "none";
 		btn2.style.display = "none";
 		btn1.style.display = "none";
