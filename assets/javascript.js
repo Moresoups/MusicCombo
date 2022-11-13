@@ -234,9 +234,9 @@ function combine() {
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
-					<a href="https://open.spotify.com/artist/${num}">${profile.name}</a>
+					<a href="https://open.spotify.com/artist/${num}" size="+3">${profile.name}</a>
 					<div>
-					<font size="+3">Wind and Earth</font>
+					<font size="+4">Wind and Earth</font>
 					</div>
 					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
 					<div>
@@ -297,10 +297,13 @@ function combine() {
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
 					<a href="https://open.spotify.com/artist/${num}">${profile.name}</a>
-					<h3>Wind and Water</h3>
+					<div>
+					<font size="+4">Wind and Water</font>
+					</div>
 					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;" />
-          <h3>This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</h3>
-				`;
+					<div>
+          <font size="+2">This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</font>
+				</div>`;
 			})
 			.catch((err) => console.error(err));
 
@@ -354,10 +357,13 @@ function combine() {
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
 					<a href="https://open.spotify.com/artist/${num}">${profile.name}</a>
-					<h3>Wind and Fire</h3>
+					<div>
+					<font size="+3">Wind and Fire</font>
+					</div>
 					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
-          <h3>This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration.</h3>
-				`;
+					<div>
+          <font size="+2">This is an abstract combination, an ideological rampage. It is the witch hunt, death camps, and the incited revolution. It’s mass fervor and rage. It’s the music of a great, big horde of people all getting to describe something the same way, with the same slogans and words, and going out to do something about their sense of frustration.</font>
+			</div>	`;
 			})
 			.catch((err) => console.error(err));
 		fetch(
@@ -1027,7 +1033,7 @@ function combine() {
 		Light == true
 	) {
 		fetch(
-			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=10&numberOfTopResults=10",
 			options1
 		)
 			.then((response) => response.json())
