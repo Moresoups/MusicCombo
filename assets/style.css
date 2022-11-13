@@ -8,7 +8,7 @@ body {
     background-color: #111;
     
   }
-#col-card{
+.color-column{
   background-color: #111;
 
 }
@@ -34,11 +34,12 @@ body {
     position: absolute;
   }
   
-  
+
     
   
   .MERGE:before {
     content: "";
+    text-align: center;
     background: linear-gradient(
       45deg,
       #ff0000,
@@ -52,6 +53,7 @@ body {
       #ff0000
     );
     position: absolute;
+    text-align: center;
     top: -2px;
     left: -2px;
     background-size: 400%;
