@@ -70,16 +70,13 @@ let Fire = false;
 let Dark = false;
 let Light = false;
 let key =""
+
 function water() {
 	Water = !Water;
 	key+="water-"
 	console.log("confirmed");
 	btn4.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Light == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Light) || (Fire) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn3.style.display = "none";
@@ -92,11 +89,7 @@ function earth() {
 	Earth = !Earth;
 	console.log("confirmed");
 	btn1.style.display = "none";
-	if (Wind == true ||
-		Light == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Light) || (Water) || (Fire) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -110,11 +103,7 @@ function wind() {
 	Wind = !Wind;
 	console.log("confirmed");
 	btn3.style.display = "none";
-	if (Light == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Fire) || (Earth) || (Water) || (Light) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -127,11 +116,7 @@ function fire() {
 	Fire = !Fire;
 	console.log("confirmed");
 	btn2.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Light == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Water) || (Light) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -144,11 +129,7 @@ function dark() {
 	Dark = !Dark;
 	console.log("confirmed");
 	btn5.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Light == true) {
+	if ((Wind) || (Earth) || (Water) || (Fire) || (Light)) {
 		btn6.style.display = "none";
 		btn4.style.display = "none";
 		btn3.style.display = "none";
@@ -161,11 +142,7 @@ function light() {
 	Light = !Light;
 	console.log("confirmed");
 	btn6.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Water) || (Fire) ||(Dark)) {
 		btn5.style.display = "none";
 		btn4.style.display = "none";
 		btn3.style.display = "none";
@@ -918,7 +895,7 @@ function combine() {
 	// the midnight
 	else if ((!Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (Light)) {
 		fetch(
-			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight%20type&type=artists&offset=0&limit=10&numberOfTopResults=10",
+			"https://spotify23.p.rapidapi.com/search/?q=the%20midnight&type=artists&offset=0&limit=10&numberOfTopResults=10",
 			options1
 		)
 			.then((response) => response.json())
@@ -966,13 +943,7 @@ function combine() {
 			})
 			.catch((err) => console.error(err));
 	} else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+		(!Wind) && (!Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		console.log("no selection");
 	} else {
 		console.log("error");
