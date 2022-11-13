@@ -71,6 +71,8 @@ let Light = false;
 function water() {
 	Water = !Water;
 	console.log("confirmed");
+<<<<<<< HEAD
+=======
 	if (Wind == true ||
 		Earth == true ||
 		Light == true ||
@@ -83,11 +85,14 @@ function water() {
 		btn2.style.display = "none";
 		btn1.style.display = "none";
 	}
+>>>>>>> dcda1d2bbfc0deb5a46d4e36cbd9b087181629a5
 }
 
 function earth() {
 	Earth = !Earth;
 	console.log("confirmed");
+<<<<<<< HEAD
+=======
 	btn1.style.display = "none";
 	if (Wind == true ||
 		Light == true ||
@@ -101,11 +106,14 @@ function earth() {
 		btn2.style.display = "none";
 
 	}
+>>>>>>> dcda1d2bbfc0deb5a46d4e36cbd9b087181629a5
 }
 
 function wind() {
 	Wind = !Wind;
 	console.log("confirmed");
+<<<<<<< HEAD
+=======
 	btn3.style.display = "none";
 	if (Light == true ||
 		Earth == true ||
@@ -118,57 +126,22 @@ function wind() {
 		btn2.style.display = "none";
 		btn1.style.display = "none";
 	}
+>>>>>>> dcda1d2bbfc0deb5a46d4e36cbd9b087181629a5
 }
 
 function fire() {
 	Fire = !Fire;
 	console.log("confirmed");
-	btn2.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Light == true ||
-		Dark == true) {
-		btn6.style.display = "none";
-		btn5.style.display = "none";
-		btn4.style.display = "none";
-		btn3.style.display = "none";
-		btn1.style.display = "none";
-	}
 }
 
 function dark() {
 	Dark = !Dark;
 	console.log("confirmed");
-	btn5.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Light == true) {
-		btn6.style.display = "none";
-		btn4.style.display = "none";
-		btn3.style.display = "none";
-		btn2.style.display = "none";
-		btn1.style.display = "none";
-	}
 }
 
 function light() {
 	Light = !Light;
 	console.log("confirmed");
-	btn6.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
-		btn5.style.display = "none";
-		btn4.style.display = "none";
-		btn3.style.display = "none";
-		btn2.style.display = "none";
-		btn1.style.display = "none";
-	}
 }
 
 
@@ -1025,6 +998,10 @@ function combine() {
 	} else {
 		console.log("error");
 	}
+	//reset function
+	function Reset() {
+		window.location.reload();
+	}
 
 }
 
@@ -1033,22 +1010,4 @@ function combine() {
 //Sys.setenv((SPOTIFY_CLIENT_ID = "96dc2bc1c09645d8af8883911f9c6ae7"));
 //Sys.setenv((SPOTIFY_CLIENT_SECRET = "d6b103e15d1e41758ae6fefc9cfdec8d"));
 
-
-const form = document.querySelector('#inputForm');
-form.addEventListener("submit", e => {
-	e.preventDefault();
-	const input = document.querySelector("#searchText");
-	let inputVal = input.value;
-
-	//ajax here
-	const url = `https://spotify23.p.rapidapi.com/search/?q=${inputVal}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
-
-	fetch(url, options)
-		.then((response) => response.json())
-		.then((response) => {
-			console.log("response", response);
-
-		})
-		.catch((err) => console.error(err));
-})
 
