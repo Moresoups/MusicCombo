@@ -1,22 +1,20 @@
 body {
   text-align: center;
-  padding: 60px;
+  padding: 5px;
   font-family: sans-serif;
   background-color: #111;
 }
-
 .footer {
-  background-color: #212121;
+  background-color: #111;
 }
-
-#card {
-  position: absolute;
+#col-card {
+  background-color: #111;
 }
-
 .MERGE {
   padding: 0.6em 2em;
   border: none;
   outline: none;
+  justify-items: center;
   color: rgb(255, 255, 255);
   background: #111;
   cursor: pointer;
@@ -28,6 +26,10 @@ body {
   touch-action: manipulation;
   font-size: 70px;
   top: 50px;
+  width: 100%;
+}
+#card {
+  position: absolute;
 }
 
 .MERGE:before {
@@ -83,11 +85,13 @@ body {
   cursor: pointer;
 }
 
-#btn1 {
+.E {
   background-color: rgb(145, 97, 52);
   border: black;
   color: white;
   padding: 20px;
+  width: 210px;
+  height: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -98,15 +102,16 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   position: relative;
-  top: 30px;
   cursor: pointer;
 }
 
-#btn4 {
+.WA {
   background-color: rgb(0, 60, 255);
   border: black;
   color: white;
-  padding: 20px;
+
+  width: 210px;
+  height: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -117,15 +122,16 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   position: relative;
-  top: 30px;
   cursor: pointer;
 }
 
-#btn3 {
+.WI {
   background-color: rgb(69, 176, 226);
   border: black;
   color: white;
   padding: 20px;
+  width: 210px;
+  height: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -136,34 +142,36 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   position: relative;
-  top: 30px;
   cursor: pointer;
 }
-
-#btn2 {
+.container {
+  background-color: #212121;
+}
+.F {
   background-color: rgb(255, 51, 0);
   border: black;
   color: white;
-
+  width: 210px;
+  height: 100px;
   padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 40px;
-  margin: 4px 2px;
   font-weight: normal;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
-  border-radius: 50%;
+  border-radius: 100%;
   position: relative;
-  top: 30px;
   cursor: pointer;
 }
 
-#btn5 {
+.D {
   background-color: black;
   border: black;
   color: white;
+  width: 210px;
+  height: 100px;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -175,15 +183,17 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   position: relative;
-  top: 30px;
+
   cursor: pointer;
 }
 
-#btn6 {
+.L {
   background-color: rgb(238, 238, 130);
   border: black;
   color: white;
   padding: 20px;
+  width: 210px;
+  height: 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -194,11 +204,15 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
   position: relative;
-  top: 30px;
   cursor: pointer;
 }
 
-.btn:hover {
+.L:hover,
+.E:hover,
+.WI:hover,
+.F:hover,
+.WA:hover,
+.D:hover {
   background-image: linear-gradient(
     to right,
     red,
@@ -217,7 +231,12 @@ body {
     background-position: 20vw;
   }
 }
-.btn:active {
+.L:active,
+.E:active,
+.WI:active,
+.F:active,
+.WA:active,
+.D:hover {
   background-color: purple;
 }
 .activated {
@@ -229,6 +248,8 @@ body {
   position: relative;
   top: 50px;
   color: rgb(137, 4, 4);
+  font-size: large;
+  background: #111;
 }
 
 .hero {

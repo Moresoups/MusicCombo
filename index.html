@@ -7,88 +7,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elemental Music Maker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
   <section class="hero is-medium">
     <h1 class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
     <div class="hero-head">
+      </div>
+      </section>
+      <section class="section">
       <div class="container">
-        <div class="columns is-mobile">
-          <div class="column is-half">
-            <button class="btn bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1" onclick="earth();">
+        <div class="columns is-variable is-0-mobile">
+          <div class="column is-full">
+            <button class="E bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1" onclick="earth();">
               <i class="fa-solid fa-earth-americas"></i>
               Earth
             </button>
-          </div>
-          <div class="column is-4-offset-7">
-            <button class="btn" style='margin-right:50px' id="btn2" onclick="fire();">
-              <i class="fa-solid fa-fire"></i>
-              Fire</button>
-          </div>
-        </div>
+            </div>
+            </div>
+      
         <div id="youtube"></div>
-        <div class="columns is-mobile">
-          <div class="column is-one-quarter">
-            <button class="btn" style='margin-right:50px' id="btn3" onclick="wind();">
+        <div class="columns is-variable is-0-mobile">
+          <div class="column is-two-fifths">
+            <button class="WI" style='margin-right:50px' id="btn3" onclick="wind();">
               <i class="fa-solid fa-wind"></i>
               Wind</button>
-          </div>
-          <div class="column is-4 is-offset-6">
-            <button class="btn" style='margin-right:50px' id="btn4" onclick="water();">
-              <i class="fa-solid fa-tint"></i>
-              Water </button>
-          </div>
-
+              </div>
+             <div class="column is-10 is-offset-0">
+                <button class="F" style='margin-right:50px' id="btn2" onclick="fire();">
+                  <i class="fa-solid fa-fire"></i>
+                        Fire</button>
+              </div>
         </div>
+        <div class="columns is-variable is-0-mobile">
 
-        <div class="columns is-mobile">
+          <div class="column is-three-fifths">
 
-          <div class="column is-4 is-offset-2">
-            <button class="btn" style='margin-right:50px' id="btn5" onclick="dark();">
-              <i class="fa-solid fa-circle"></i>
+            <button class="D" style='margin-right:50px' id="btn5" onclick="dark();">
+              <i class="fa-solid fa-moon"></i>
               Dark
             </button>
           </div>
+          <div class="column is-4-desktop is-10-table is-offset-0">
+            <button class="WA" style='margin-right:50px' id="btn4" onclick="water();">
+              <i class="fa-solid fa-water"></i>
+              Water </button>
+          </div>
+          </div>
+          <div class="columns is-mobile">
+          <div class="column is-full">
+            <button class="L" style='margin-right:50px' id="btn6" onclick="light();">
+              <i class="fa-solid fa-sun"></i>
+              Light
+            </button>
         </div>
-        <div class="column">
-          <button class="btn" style='margin-right:50px' id="btn6" onclick="light();">
-            <i class="fa-solid fa-sun"></i>
-
-            Light
-          </button>
-
         </div>
       </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+      </section>
     <div id="spotify" class="spotify"> </div>
+    <section class="section">
     
-    <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
-   <button class="MERGE"  onclick="Reset();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
-<container>
-    <div id="spotify" class="spotify is-4"> </div>
-    </container>
-<section class="top-banner" style="display:none;" id="FindMore">
-<div class='container'>        
+      <div class="columns is-variable is-0-mobile">
+        <div class="column is-full-desktop is-10-tablet is-0-mobible">
+        <button class="MERGE" onclick="combine();" role="button" id="Combine">Combine!</button>
+          </div>
+          </div>
+        
+     </section>
+   <button class="MERGE"  onClick="window.location.reload();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
+   
 
-  <input type=”text” id=”trackInput”>
-  <button type=”submit” id=”submitButton” name=”button”>SUBMIT</button>
-  <section id="playAudioHere"></section>
-</section>
-<section class="section">
-  <div class="container">
-  <div class="column is- is-multiline">
+<section class="section pb-10">
+ <div class="container">
+  <div id="col-card" class="columns is- is-multiline">
     <div class="column is-one-fifth">
       <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
         <header class="card-header has-background-grey-dark ">
           <p class= "card-header-title subtitle has-text-white is-centered">
-            Combinations
+            Combinations Discovered
           </p>
         </header>
         <div class="card-content ">
@@ -97,6 +94,8 @@
       </div>
       </div>
     </section>
+
+
     <footer class="footer pb-0">
       <div class="content has-text-white">
         <p>
