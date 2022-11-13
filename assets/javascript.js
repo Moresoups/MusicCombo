@@ -920,7 +920,7 @@ function combine() {
 				spotify.innerHTML = `
 					<a href="https://open.spotify.com/artist/${num}">${profile.name}</a>
 					<h3>Dark and Light</h3>
-					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
+					<img src="${visuals.avatarImage.sources[0].url}" style="width:400px;height:400px;"/>
           <h3>A perfectly balanced combination, the brightest of lights cast the darkest of shadows. This is the music of nuance and morality.</h3>
 				`;
 			})
