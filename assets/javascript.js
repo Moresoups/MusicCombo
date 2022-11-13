@@ -189,10 +189,8 @@ function combine() {
 	document.getElementById('Refresh').style.display = "";
 
 
-	document.getElementById('findMore').style.display = "";
-	document.getElementById('refresh').style.display = "";
 
-	refresh.style.display = "block";
+	// refresh.style.display = "block";
 	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		console.log(Wind, "wind")
 		fetch(
