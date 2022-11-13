@@ -196,7 +196,7 @@ function combine() {
 	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		console.log(Wind, "wind")
 		fetch(
-			"https://spotify23.p.rapidapi.com/search/?q="rolling%20stones"&type=artists&offset=0&limit=2&numberOfTopResults=2",
+			"https://spotify23.p.rapidapi.com/search/?q=rolling%20stones&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
 		)
 			.then((response) => response.json())
