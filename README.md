@@ -30,3 +30,7 @@ Our objective is to create a simple application that uses two different elements
 * Christopher Gardner
 * Connor Bazil
 * Silvia Olinger
+
+##Screen Shot
+<img src= "ScreenShots/MusicComboA.png">
+<img src= "ScreenShots/MusicComboB.png">
