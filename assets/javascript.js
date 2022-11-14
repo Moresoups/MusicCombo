@@ -9,14 +9,15 @@ function loadLocalStorage() {
 		const listItem = document.createElement("li")
 		listItem.innerHTML = combinationHistory[i];
 		combinationList.appendChild(listItem);
-	}
+	
+}
 }
 
 loadLocalStorage();
 
 
 const allBtns = document.getElementsByClassName("btn");
-const combineBtn = document.getElementById("combine");
+const combineBtn = document.getElementById("Combine");
 
 
 for (let i = 0; i < allBtns.length; i++) {
