@@ -31,6 +31,12 @@ Our objective is to create a simple application that uses two different elements
 * Connor Bazil
 * Silvia Olinger
 
-##Screen Shot
+## Screen Shot
 <img src= "assets/ScreenShots/MusicComboA.png">
 <img src= "assets/ScreenShots/MusicComboB.png">
+
+## Repo Link
+https://github.com/Moresoups/MusicCombo/blob/main/README.md
+
+## Website Link
+
