@@ -10,12 +10,6 @@ Our objective is to create a simple application that uses two different elements
 * **I WANT** an interactive and unique way to discover new artists
 * **SO THAT** I can enjoy the process of finding fresh music
 
-## Screenshots
-
-* Home/Elements Page
-
-* Result Page
-
 ## Technologies Used
 
 * Bulma CSS Framework
@@ -25,13 +19,12 @@ Our objective is to create a simple application that uses two different elements
 * Spotify API (RapidAPI)
 * YouTube API (RapidAPI)
 
-
 ## Contributers
 * Christopher Gardner
 * Connor Bazil
 * Silvia Olinger
 
-## Screen Shot
+## Screenshots
 <img src= "assets/ScreenShots/MusicComboA.png">
 <img src= "assets/ScreenShots/MusicComboB.png">
 
