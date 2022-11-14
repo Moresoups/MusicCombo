@@ -32,5 +32,5 @@ Our objective is to create a simple application that uses two different elements
 * Silvia Olinger
 
 ##Screen Shot
-<img src= "ScreenShots/MusicComboA.png">
-<img src= "ScreenShots/MusicComboB.png">
+<img src= "assets/ScreenShots/MusicComboA.png">
+<img src= "assets/ScreenShots/MusicComboB.png">
