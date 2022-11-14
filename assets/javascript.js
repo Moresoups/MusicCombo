@@ -10,6 +10,13 @@
 // Searches local storage for combinations previously attempted
 const combinationHistory = JSON.parse(localStorage.getItem("combinationHistory")) || []
 const combinationList = document.getElementById("combinationList");
+const maintitle= document.getElementById("maintitle");
+const resultpage=document.getElementById("resultpage")
+window.addEventListener("load",load);
+function load(){
+	resultpage.hidden = true;
+
+}
 
 function loadLocalStorage() {
 	localStorage.getItem(combinationHistory)
@@ -194,6 +201,9 @@ function combine() {
 	Combine.style.display = "none";
 	const element=document.getElementById("elements")
 	element.style.backgroundColor="#111";
+	resultpage.hidden=false;
+	maintitle.hidden=true;
+
 
 
 	document.getElementById('Refresh').style.display = "";
