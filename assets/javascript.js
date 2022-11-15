@@ -925,7 +925,7 @@ function combine() {
 			})
 			.catch((err) => console.error(err));
 	}
-	// the midnight
+	// bring me the horizon
 	else if ((!Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Bring%20me%20the%20Horizon&type=multi&offset=0&limit=3&numberOfTopResults=3",
@@ -937,7 +937,7 @@ function combine() {
 				const uriNew = response.artists.items[0].data.uri
 				console.log(uriNew);
 				const num = uriNew.split(':')[2]
-				const combination = "Dark & Light - Bring me the Horizon"
+				const combination = "Dark & Light - Bring Me the Horizon"
 
 				if (combinationHistory.indexOf(combination) === -1) {
 
