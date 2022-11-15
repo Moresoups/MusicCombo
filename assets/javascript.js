@@ -42,7 +42,6 @@ const options1 = {
 	},
 };
 
-
 const options = {
 	method: "GET",
 	headers: {
@@ -69,16 +68,14 @@ let Wind = false;
 let Fire = false;
 let Dark = false;
 let Light = false;
+let key =""
 
 function water() {
 	Water = !Water;
+	key+="water-"
 	console.log("confirmed");
 	btn4.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Light == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Light) || (Fire) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn3.style.display = "none";
@@ -91,11 +88,7 @@ function earth() {
 	Earth = !Earth;
 	console.log("confirmed");
 	btn1.style.display = "none";
-	if (Wind == true ||
-		Light == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Light) || (Water) || (Fire) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -109,11 +102,7 @@ function wind() {
 	Wind = !Wind;
 	console.log("confirmed");
 	btn3.style.display = "none";
-	if (Light == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Fire) || (Earth) || (Water) || (Light) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -126,11 +115,7 @@ function fire() {
 	Fire = !Fire;
 	console.log("confirmed");
 	btn2.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Light == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Water) || (Light) || (Dark)) {
 		btn6.style.display = "none";
 		btn5.style.display = "none";
 		btn4.style.display = "none";
@@ -143,11 +128,7 @@ function dark() {
 	Dark = !Dark;
 	console.log("confirmed");
 	btn5.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Light == true) {
+	if ((Wind) || (Earth) || (Water) || (Fire) || (Light)) {
 		btn6.style.display = "none";
 		btn4.style.display = "none";
 		btn3.style.display = "none";
@@ -160,11 +141,7 @@ function light() {
 	Light = !Light;
 	console.log("confirmed");
 	btn6.style.display = "none";
-	if (Wind == true ||
-		Earth == true ||
-		Water == true ||
-		Fire == true ||
-		Dark == true) {
+	if ((Wind) || (Earth) || (Water) || (Fire) ||(Dark)) {
 		btn5.style.display = "none";
 		btn4.style.display = "none";
 		btn3.style.display = "none";
@@ -188,16 +165,10 @@ function combine() {
 	document.getElementById('Refresh').style.display = "";
 
 
-	if (
-		Wind == true &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
 
-
+	// refresh.style.display = "block";
+	if ((Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
+		console.log(Wind, "wind")
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=rolling%20stones&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -210,7 +181,6 @@ function combine() {
 				const num = uriNew.split(':')[2]
 				const combination = "Wind & Earth - The Rolling Stones"
 
-				// for (var i = 0; i < combinationHistory.length; i++) {
 				if (combinationHistory.indexOf(combination) === -1) {
 
 					combinationHistory.push(combination)
@@ -220,9 +190,6 @@ function combine() {
 					combinationList.appendChild(listItem);
 				}
 
-
-
-				// }
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
@@ -256,14 +223,7 @@ function combine() {
 	}
 
 	//Deepsky
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Deepsky&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -318,14 +278,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//red hot chili peppers
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=red%20hot%20chili%20peppers%20&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -377,14 +330,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//tobacco
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=tobacco&type=artists&offset=0&limit=10&numberOfTopResults=5",
 			options1
@@ -437,14 +383,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//the white stripes need quote
-	else if (
-		Wind == true &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((Wind) && (!Earth) && (!Water) && (!Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20white%20stripes&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -497,14 +436,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//the comet is coming
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20comet%20is%20coming&type=artists&offset=0&limit=10&numberOfTopResults=2",
 			options1
@@ -559,14 +491,7 @@ function combine() {
 	}
 
 	//the heavy
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (Water) && (!Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=the%20heavy&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -619,14 +544,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	//mf doom
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=MF%20DOOM&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -681,14 +599,7 @@ function combine() {
 	}
 
 	//planet waves need quote
-	else if (
-		Wind == false &&
-		Earth == true &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((!Wind) && (Earth) && (!Water) && (!Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=planet%20waves&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -743,14 +654,7 @@ function combine() {
 	}
 	//Band Hillsong United
 	//music - Another in the Water
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == true &&
-		Dark == false &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (Water) && (Fire) && (!Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Hillsong%20United&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -806,14 +710,7 @@ function combine() {
 
 	//Agent Fresco
 	//music - Dark Water
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Agent%20Fresco&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -865,14 +762,7 @@ function combine() {
           ></iframe>`;
 			})
 			.catch((err) => console.error(err));
-	} else if (
-		Wind == false &&
-		Earth == false &&
-		Water == true &&
-		Fire == false &&
-		Dark == false &&
-		Light == true
-	) {
+	} else if ((!Wind) && (!Earth) && (Water) && (!Fire) && (!Dark) && (Light)) {
 		//creedence clearwater revival
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=creedence%20clearwater&type=artists&offset=0&limit=2&numberOfTopResults=2",
@@ -928,14 +818,7 @@ function combine() {
 	}
 
 	//cigarettes after sex
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == true &&
-		Light == false
-	) {
+	else if ((!Wind) && (!Earth) && (!Water) && (Fire) && (Dark) && (!Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=cigarettes%20after%20sex&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -989,14 +872,7 @@ function combine() {
 			.catch((err) => console.error(err));
 	}
 	// empire of the sun
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == true &&
-		Dark == false &&
-		Light == true
-	) {
+	else if ((!Wind) && (!Earth) && (!Water) && (Fire) && (!Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=empire%20of%20the%20sun&type=artists&offset=0&limit=2&numberOfTopResults=2",
 			options1
@@ -1049,15 +925,8 @@ function combine() {
 			})
 			.catch((err) => console.error(err));
 	}
-	// the midnight
-	else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == true &&
-		Light == true
-	) {
+	// bring me the horizon
+	else if ((!Wind) && (!Earth) && (!Water) && (!Fire) && (Dark) && (Light)) {
 		fetch(
 			"https://spotify23.p.rapidapi.com/search/?q=Bring%20me%20the%20Horizon&type=multi&offset=0&limit=3&numberOfTopResults=3",
 			options1
@@ -1068,7 +937,7 @@ function combine() {
 				const uriNew = response.artists.items[0].data.uri
 				console.log(uriNew);
 				const num = uriNew.split(':')[2]
-				const combination = "Dark & Light - Bring me the Horizon"
+				const combination = "Dark & Light - Bring Me the Horizon"
 
 				if (combinationHistory.indexOf(combination) === -1) {
 
@@ -1110,13 +979,7 @@ function combine() {
 			})
 			.catch((err) => console.error(err));
 	} else if (
-		Wind == false &&
-		Earth == false &&
-		Water == false &&
-		Fire == false &&
-		Dark == false &&
-		Light == false
-	) {
+		(!Wind) && (!Earth) && (!Water) && (!Fire) && (!Dark) && (!Light)) {
 		console.log("no selection");
 	} else {
 		console.log("error");
