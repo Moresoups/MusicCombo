@@ -12,13 +12,15 @@
 
 <body>
   <section class="hero is-medium">
-    <h1 class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
+    <h1 id="maintitle" class="has-text-white is-size-1">Select two elements and click combine to create music!</h1>
+    <h1 id="resultpage" class="has-text-white is-size-1"> Combination Result</h1>
+
     <div class="hero-head">
       </div>
       </section>
       <section class="section">
-      <div class="container">
-        <div class="columns is-variable is-0-mobile">
+      <div id="elements" class="container">
+        <div id= "elements"class="columns is-variable is-0-mobile">
           <div class="column is-full">
             <button class="E bd-notification is-primary html" style='margin-right:50px' id="btn1" row="1" onclick="earth();">
               <i class="fa-solid fa-earth-americas"></i>
@@ -28,7 +30,7 @@
             </div>
       
         <div class="column-color "id="youtube"></div>
-        <div class="columns is-variable is-0-mobile">
+        <div id="elements" class="columns is-variable is-0-mobile">
           <div class="column is-two-fifths">
             <button class="WI" style='margin-right:50px' id="btn3" onclick="wind();">
               <i class="fa-solid fa-wind"></i>
@@ -65,7 +67,11 @@
         </div>
       </div>
       </section>
-    <div id="spotify" class="spotify"> </div>
+      <section class="section">
+        <div id="elements" class = "container">
+    <div  id="spotify" class="spotify"> </div>
+     </div>
+      </section>
     <section class="section">
        <div class="container">
       <div class="columns is-variable is-0-mobile column-color">
@@ -80,14 +86,14 @@
       <div class="container">
      <div class="columns is-variable is-0-mobile column-color">
        <div class="column is-full  is-0-mobible">
-   <button class="MERGE button"  onClick="window.location.reload();"  style="display:none;"  id="Refresh" >Do Another Combination</button>
+   <button class="MERGE button is-rounded"  onClick="window.location.reload();"  style="display:none;"  id="Refresh" >Play Again!</button>
    </div>
    </div>
    </div>
      </section>
 
 <section class="section pb-10">
- <div class="container">
+ <div class="container is-responsive">
   <div class="columns is- is-multiline column-color">
     <div class="column is-one-fifth">
       <div class="card has-background-grey-darker has-text-white py-0 mr-0" id="card">
@@ -103,7 +109,7 @@
       </div>
     </section>
 
-
+     <section class="section">
     <footer class="footer pb-0">
       <div class="content has-text-white">
         <p>
@@ -111,7 +117,7 @@
         </p> 
       </div>
     </footer>
-</main>
+     </section>
 
 
     <script src="https://kit.fontawesome.com/ebe5d16706.js" crossorigin="anonymous"></script>
