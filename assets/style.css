@@ -228,7 +228,7 @@ body {
     background-position: 20vw;
   }
 }
-.L:active,
+/* .L:active,
 .E:active,
 .WI:active,
 .F:active,
@@ -238,7 +238,7 @@ body {
 }
 .activated {
   background-color: #f00;
-}
+} */
 
 .spotify {
   text-align: center;
