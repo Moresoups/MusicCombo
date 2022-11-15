@@ -1,12 +1,6 @@
+
 const combinationHistory = JSON.parse(localStorage.getItem("combinationHistory")) || []
 const combinationList = document.getElementById("combinationList");
-const maintitle= document.getElementById("maintitle");
-const resultpage=document.getElementById("resultpage")
-window.addEventListener("load",load);
-function load(){
-	resultpage.hidden = true;
-
-}
 
 function loadLocalStorage() {
 	localStorage.getItem(combinationHistory)
@@ -189,9 +183,7 @@ function combine() {
 	btn2.style.display = "none";
 	btn1.style.display = "none";
 	Combine.style.display = "none";
-	const element=document.getElementById("elements")
-	element.style.backgroundColor="#111";
-	resultpage.hidden=falstitle.hidden=true;
+
 
 	document.getElementById('Refresh').style.display = "";
 
@@ -234,7 +226,7 @@ function combine() {
 				const spotify = document.getElementById("spotify");
 				const { profile, url, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
-					<a href="https://open.spotify.com/artist/${num}" size="+3">${profile.name}</a>
+					<a href="https://open.spotify.com/artist/${num}" style="font-size: 50px;">${profile.name}</a>
 					<div>
 					<font size="+4">Wind and Earth</font>
 					</div>
@@ -296,14 +288,15 @@ function combine() {
 				const spotify = document.getElementById("spotify");
 				const { profile, uri, visuals } = response.artists.items[0].data;
 				spotify.innerHTML = `
-					<a href="https://open.spotify.com/artist/${num}">${profile.name}</a>
+					<a href="https://open.spotify.com/artist/${num}" style="font-size: 50px;">${profile.name}</a>
 					<div>
-					<font size="+4">Wind and Water</font>
+					<font size="+3">Wind and Water</font>
 					</div>
 					 <font size="+2">This combo is the music of change, especially social change. This combination is aware of the circular nature of change and is comfortable with constant shifting, unaware of why not everyone else is. This combo is also aware of the way things tend to come back. They are aware that history is tomorrow. Its is music that escapes time itself</font>
 					 <div>
 					<img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;" />
-					</div>`;
+					</div>
+				`;
 			})
 			.catch((err) => console.error(err));
 
@@ -544,7 +537,6 @@ function combine() {
 					<div>
           <img src="${visuals.avatarImage.sources[0].url}" style="width:500px;height:600px;"/>
 				</div>`;
-
 			})
 			.catch((err) => console.error(err));
 
